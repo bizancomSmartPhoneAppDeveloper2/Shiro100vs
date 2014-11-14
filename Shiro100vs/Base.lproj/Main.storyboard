@@ -20,7 +20,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="城" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E39-48-rrk">
                                             <rect key="frame" x="8" y="37" width="584" height="30"/>
-                                            <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="35"/>
+                                            <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="34"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -60,37 +60,37 @@
         <scene sceneID="TGp-at-y0g">
             <objects>
                 <tableViewController id="QsM-qt-fqy" customClass="MyRankViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="22" sectionFooterHeight="22" id="BbV-Nz-oFb">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="152" sectionHeaderHeight="22" sectionFooterHeight="22" id="BbV-Nz-oFb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Shiro_MyRank" rowHeight="131" id="n0t-Hu-lcM" customClass="MyRankTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Shiro_MyRank" rowHeight="157" id="n0t-Hu-lcM" customClass="MyRankTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n0t-Hu-lcM" id="4x8-gB-ZeA">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ibv-HE-urF">
-                                            <rect key="frame" x="5" y="5" width="120" height="120"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="城" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvp-fz-KZJ">
-                                            <rect key="frame" x="136" y="37" width="426" height="30"/>
-                                            <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="35"/>
+                                            <rect key="frame" x="5" y="116" width="587" height="30"/>
+                                            <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="34"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="第９９９位" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7k-Kr-HGp">
-                                            <rect key="frame" x="136" y="8" width="134" height="21"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <rect key="frame" x="113" y="8" width="172" height="44"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="コメント" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmX-pW-YhA">
-                                            <rect key="frame" x="136" y="75" width="456" height="53"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <rect key="frame" x="113" y="52" width="456" height="53"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ibv-HE-urF">
+                                            <rect key="frame" x="8" y="8" width="100" height="100"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -163,28 +163,61 @@
                                 <rect key="frame" x="0.0" y="1" width="600" height="550"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knQ-oc-yEW">
-                                <rect key="frame" x="16" y="20" width="150" height="120"/>
-                                <state key="normal" image="Button_Shikan_150x120.png">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knQ-oc-yEW">
+                                <rect key="frame" x="16" y="458" width="95" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="aVw-hb-PD3"/>
+                                    <constraint firstAttribute="width" constant="95" id="fvO-Oa-tyV"/>
+                                </constraints>
+                                <state key="normal" image="Button_Shikan_140x100.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="button_Shikan_Action:" destination="Iiy-pA-w3R" eventType="touchUpInside" id="ATP-K4-bcR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="現在の状況" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wse-IT-20j">
-                                <rect key="frame" x="16" y="148" width="389" height="71"/>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="現在の状況" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wse-IT-20j">
+                                <rect key="frame" x="119" y="465" width="389" height="71"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日本百名城バトル" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbt-lc-Nbm">
+                                <rect key="frame" x="16" y="28" width="296" height="39"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="写真を投稿して全国の" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMf-FL-L05">
+                                <rect key="frame" x="16" y="104" width="204" height="21"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="自分の好きなお城を選んで" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLs-Vi-Con">
+                                <rect key="frame" x="16" y="75" width="204" height="21"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="百名城とバトルだ！！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWy-xk-IA8">
+                                <rect key="frame" x="16" y="133" width="204" height="21"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wgu-BE-RFp" secondAttribute="trailing" id="1Fi-4u-Qpr"/>
                             <constraint firstItem="Wgu-BE-RFp" firstAttribute="leading" secondItem="KNY-jx-YED" secondAttribute="leading" id="8Cj-XM-bIP"/>
                             <constraint firstAttribute="bottom" secondItem="Wgu-BE-RFp" secondAttribute="bottom" constant="49" id="JZ2-DC-I8J"/>
                             <constraint firstItem="Wgu-BE-RFp" firstAttribute="top" secondItem="KNY-jx-YED" secondAttribute="top" constant="1" id="LdC-5J-tlT"/>
                             <constraint firstAttribute="trailing" secondItem="Wgu-BE-RFp" secondAttribute="trailing" id="M7b-Z3-NLO"/>
+                            <constraint firstItem="UN6-i2-WEK" firstAttribute="top" secondItem="Wse-IT-20j" secondAttribute="bottom" constant="15" id="OIV-rh-VTC"/>
+                            <constraint firstItem="UN6-i2-WEK" firstAttribute="top" secondItem="knQ-oc-yEW" secondAttribute="bottom" constant="8" id="Yqx-f2-jOX"/>
+                            <constraint firstItem="knQ-oc-yEW" firstAttribute="leading" secondItem="KNY-jx-YED" secondAttribute="leading" constant="16" id="cDw-nd-BOT"/>
+                            <constraint firstItem="Wse-IT-20j" firstAttribute="leading" secondItem="knQ-oc-yEW" secondAttribute="trailing" constant="8" id="qBG-R1-LgB"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="日本" image="Japanese" id="PNx-nr-8AS"/>
@@ -281,7 +314,7 @@
     <resources>
         <image name="Button_Album_100x50.png" width="100" height="50"/>
         <image name="Button_Camera_100x50.png" width="100" height="50"/>
-        <image name="Button_Shikan_150x120.png" width="150" height="120"/>
+        <image name="Button_Shikan_140x100.png" width="140" height="100"/>
         <image name="Camera" width="40" height="40"/>
         <image name="Japanese" width="40" height="40"/>
         <image name="Japanese_color.png" width="772" height="800"/>

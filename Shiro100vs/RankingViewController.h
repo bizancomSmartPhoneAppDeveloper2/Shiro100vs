@@ -24,4 +24,7 @@
 //自分のサーバーにあるJSONデータを返すメソッド
 - (NSArray *)serverdata: (NSString *)url;
 
+- (void)setAlertTitle: (NSString *)title
+			  message: (NSString *)message;
+
 @end

@@ -42,28 +42,6 @@
 
 	app = [[UIApplication sharedApplication] delegate];
 
-//	NSArray *familyNames = [UIFont familyNames];
-//	for (NSString *fn in familyNames) {
-//		NSLog(@"%@", fn);
-//	}
-//	
-//	NSLog(@" ");
-//
-//	for (NSString *familyName in familyNames) {
-//		// フォントファミリー名をフォント名に変換
-//		NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
-//		for (NSString *fontName in fontNames) {
-//			NSLog(@"%@", fontName);
-//		}
-//	}
-//	
-//	//NSArray *array = [UIFont fontNamesForFamilyName: @"ＤＦＰ祥南行書体W5"];
-//	
-//	UIFont *font =  [UIFont fontWithName: @"ＤＦＰ祥南行書体W5"
-//									size: 24];
-//	
-//	self.label_Genzaino.font = font;
-	
 	[self setGenzai];
 	
 }
@@ -282,7 +260,7 @@
 {
 	
 	self.label_Genzai.text = [NSString stringWithFormat:
-							  @"現在の状況\n　　%@に\n　　　　仕官している。", app.string_Shikan];
+							  @"現在の状況\n%@\nに仕官している。", app.string_Shikan];
 
 }
 

@@ -19,6 +19,8 @@
 	AppDelegate *app;
 	
 	NSMutableArray *array_Like;
+
+	BOOL bool_Error;
 	
 }
 
@@ -39,10 +41,11 @@
 	self.tableView.dataSource = self;
 	
 	app.bool_MyRank = YES;
+	bool_Error = NO;
 	
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewWillAppear: (BOOL)animated
 {
 	
 	if ( app.bool_MyRank ) {
@@ -99,24 +102,28 @@
 		}
 		
 		[self.tableView reloadData];
-		
-		app.bool_MyRank = NO;
+
+		if ( bool_Error == YES ) {
+
+			app.bool_MyRank = NO;
+			
+		}
 		
 	}
 	
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewDidAppear: (BOOL)animated
 {
 	
 }
 
-- (void)viewWillDisappear:(BOOL)animated
+- (void)viewWillDisappear: (BOOL)animated
 {
 	
 }
 
-- (void)viewDidDisappear:(BOOL)animated
+- (void)viewDidDisappear: (BOOL)animated
 {
 	
 }
@@ -232,13 +239,13 @@
 	
 }
 
-- (CGFloat)   tableView: (UITableView *)tableView
-heightForRowAtIndexPath: (NSIndexPath *)indexPath
-{
-	
-	return 131;
-	
-}
+//- (CGFloat)   tableView: (UITableView *)tableView
+//heightForRowAtIndexPath: (NSIndexPath *)indexPath
+//{
+//	
+//	return 155;
+//	
+//}
 
 //JSONのデータをarray_Like型で返すメソッド
 - (NSArray *)JSONArrayData: (NSString *)url
@@ -254,6 +261,18 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath
 	NSArray *_array = [NSJSONSerialization JSONObjectWithData: data
 													  options: NSJSONReadingMutableContainers
 														error: &err];
+	
+	if ( err ) {
+		
+		NSLog( @"%@", err );
+		
+		[self setAlertTitle: @"エラー"
+					message: @"サーバーにつながっていません！！"];
+		
+		bool_Error = YES;
+		
+	}
+
 	//値を返す
 	return _array;
 	
@@ -285,6 +304,11 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath
 		
 		NSLog( @"%@", err );
 		
+		[self setAlertTitle: @"エラー"
+					message: @"サーバーにつながっていません！！"];
+		
+		bool_Error = YES;
+		
 	}
 	
 	return data;
@@ -304,13 +328,18 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath
 														options: NSJSONReadingMutableContainers
 														  error: &err];
 	
-	//値を返す
 	if ( err ) {
 		
 		NSLog( @"%@", err );
 		
+		[self setAlertTitle: @"エラー"
+					message: @"サーバーにつながっていません！！"];
+		
+		bool_Error = YES;
+		
 	}
 	
+	//値を返す
 	return dic;
 	
 }
@@ -355,6 +384,17 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath
 	NSArray *_array = [NSJSONSerialization JSONObjectWithData: trimdata
 													  options: NSJSONReadingMutableContainers
 														error: &err];
+	
+	if ( err ) {
+		
+		NSLog( @"%@", err );
+		
+		[self setAlertTitle: @"エラー"
+					message: @"サーバーにつながっていません！！"];
+		
+		bool_Error = YES;
+		
+	}
 	
 	//値を返す
 	return _array;
