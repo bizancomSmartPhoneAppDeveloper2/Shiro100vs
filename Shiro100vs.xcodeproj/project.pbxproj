@@ -60,6 +60,7 @@
 		989EBF801A14827B002FCDAA /* Shiro_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF7D1A14827B002FCDAA /* Shiro_@2x.png */; };
 		989EBF811A14827B002FCDAA /* Shiro_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF7E1A14827B002FCDAA /* Shiro_@3x.png */; };
 		989EBF831A159563002FCDAA /* Button_Shikan_140x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF821A159563002FCDAA /* Button_Shikan_140x100.png */; };
+		989EBF861A15E4D0002FCDAA /* VSModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF851A15E4D0002FCDAA /* VSModeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,8 @@
 		989EBF7D1A14827B002FCDAA /* Shiro_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shiro_@2x.png"; sourceTree = "<group>"; };
 		989EBF7E1A14827B002FCDAA /* Shiro_@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shiro_@3x.png"; sourceTree = "<group>"; };
 		989EBF821A159563002FCDAA /* Button_Shikan_140x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Shikan_140x100.png; sourceTree = "<group>"; };
+		989EBF841A15E4D0002FCDAA /* VSModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSModeViewController.h; sourceTree = "<group>"; };
+		989EBF851A15E4D0002FCDAA /* VSModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSModeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +185,8 @@
 				989EBEB11A147A2C002FCDAA /* Main.storyboard */,
 				989EBEAB1A147A2C002FCDAA /* AppDelegate.h */,
 				989EBEAC1A147A2C002FCDAA /* AppDelegate.m */,
+				989EBF841A15E4D0002FCDAA /* VSModeViewController.h */,
+				989EBF851A15E4D0002FCDAA /* VSModeViewController.m */,
 				989EBECD1A147B93002FCDAA /* CameraViewController.h */,
 				989EBECE1A147B93002FCDAA /* CameraViewController.m */,
 				989EBF141A147B93002FCDAA /* JapanViewController.h */,
@@ -428,6 +433,7 @@
 				989EBF671A147B93002FCDAA /* MyRankViewController.m in Sources */,
 				989EBF201A147B93002FCDAA /* CameraViewController.m in Sources */,
 				989EBEAD1A147A2C002FCDAA /* AppDelegate.m in Sources */,
+				989EBF861A15E4D0002FCDAA /* VSModeViewController.m in Sources */,
 				989EBF681A147B93002FCDAA /* RankingTableViewCell.m in Sources */,
 				989EBF641A147B93002FCDAA /* JapanViewController.m in Sources */,
 				989EBEAA1A147A2C002FCDAA /* main.m in Sources */,
