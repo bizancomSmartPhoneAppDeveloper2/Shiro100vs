@@ -10,8 +10,10 @@
 
 #import "AppDelegate.h"
 #import "RankTableViewCell.h"
-#import "VSRankTableViewCell.h"
-#import "MyRankTableViewCell.h"
+//#import "VSRankTableViewCell.h"
+#import "VSRanTableViewCell.h"
+//#import "MyRankTableViewCell.h"
+#import "MyRanTableViewCell.h"
 
 @interface VSModeViewController ()
 {
@@ -221,7 +223,8 @@
 	
 	if ( [shiro_name isEqualToString: app.string_Shikan] ) {
 		
-		MyRankTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Shiro_MyRank"];
+//		MyRankTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Shiro_MyRank"];
+		MyRanTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Shiro_MyRan"];
 		
 		integer_Height = tableView.frame.size.width - 16;
 		
@@ -293,7 +296,8 @@
 		
 	} else {
 		
-		VSRankTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Shiro_VSRank"];
+//		VSRankTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Shiro_VSRank"];
+		VSRanTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Shiro_VSRan"];
 		
 		dispatch_queue_t q_global = dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0 );
 		dispatch_queue_t q_main   = dispatch_get_main_queue();
@@ -313,6 +317,8 @@
 			
 		});
 		
+		cell.imageView_VS_Down.image = [UIImage imageNamed: @"war_taiji_2.png"];
+		
 		NSNumber *number = [dic objectForKey: @"rankno"];
 		
 		cell.label_Rank.text = [NSString stringWithFormat: @"第%d位", [number intValue]];
@@ -329,8 +335,10 @@
 		//taglabelをブロックとタグの投稿数を表示するように設定
 		cell.label_Comment.text = [NSString stringWithFormat: @"ブロック:%@ タグの投稿数:%@", block, tagcount];
 		
-		cell.imageView_VS_1.image = nil;
-		cell.imageView_VS_2.image = nil;
+		cell.imageView_VS_Up.image = [UIImage imageNamed: @"war_taiji_1.png"];
+
+//		cell.imageView_VS_1.image = nil;
+//		cell.imageView_VS_2.image = nil;
 		
 //		cell.label_Rank.textColor    = [UIColor blackColor];
 //		cell.label_Shiro.textColor   = [UIColor blackColor];

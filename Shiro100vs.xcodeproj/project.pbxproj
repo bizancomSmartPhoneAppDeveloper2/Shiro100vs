@@ -44,7 +44,6 @@
 		989EBF631A147B93002FCDAA /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF131A147B93002FCDAA /* iTunesArtwork@2x.png */; };
 		989EBF641A147B93002FCDAA /* JapanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF151A147B93002FCDAA /* JapanViewController.m */; };
 		989EBF661A147B93002FCDAA /* MyRankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF191A147B93002FCDAA /* MyRankTableViewCell.m */; };
-		989EBF671A147B93002FCDAA /* MyRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF1B1A147B93002FCDAA /* MyRankViewController.m */; };
 		989EBF681A147B93002FCDAA /* RankingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF1D1A147B93002FCDAA /* RankingTableViewCell.m */; };
 		989EBF691A147B93002FCDAA /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF1F1A147B93002FCDAA /* RankingViewController.m */; };
 		989EBF6D1A147D71002FCDAA /* Camera_@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF6A1A147D71002FCDAA /* Camera_@1x.png */; };
@@ -61,14 +60,11 @@
 		989EBF811A14827B002FCDAA /* Shiro_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF7E1A14827B002FCDAA /* Shiro_@3x.png */; };
 		989EBF831A159563002FCDAA /* Button_Shikan_140x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF821A159563002FCDAA /* Button_Shikan_140x100.png */; };
 		989EBF861A15E4D0002FCDAA /* VSModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF851A15E4D0002FCDAA /* VSModeViewController.m */; };
-		989EBF891A1618F9002FCDAA /* MyShiroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF881A1618F9002FCDAA /* MyShiroView.m */; };
-		989EBF8C1A1619AF002FCDAA /* VSShiroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF8B1A1619AF002FCDAA /* VSShiroView.m */; };
-		989EBF8E1A17825A002FCDAA /* MyShiroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF8D1A17825A002FCDAA /* MyShiroView.xib */; };
-		989EBF901A17828B002FCDAA /* VSShiroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF8F1A17828B002FCDAA /* VSShiroView.xib */; };
-		989EBF931A178E96002FCDAA /* ShiroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF921A178E96002FCDAA /* ShiroView.m */; };
 		989EBF961A17D20C002FCDAA /* VSRankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF951A17D20C002FCDAA /* VSRankTableViewCell.m */; };
 		989EBF9C1A189457002FCDAA /* war_taiji_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF9A1A189457002FCDAA /* war_taiji_1.png */; };
 		989EBF9D1A189457002FCDAA /* war_taiji_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF9B1A189457002FCDAA /* war_taiji_2.png */; };
+		989EBFA01A18FC0E002FCDAA /* VSRanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF9F1A18FC0E002FCDAA /* VSRanTableViewCell.m */; };
+		989EBFA31A18FE29002FCDAA /* MyRanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBFA21A18FE29002FCDAA /* MyRanTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,8 +123,6 @@
 		989EBF151A147B93002FCDAA /* JapanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JapanViewController.m; sourceTree = "<group>"; };
 		989EBF181A147B93002FCDAA /* MyRankTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRankTableViewCell.h; sourceTree = "<group>"; };
 		989EBF191A147B93002FCDAA /* MyRankTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRankTableViewCell.m; sourceTree = "<group>"; };
-		989EBF1A1A147B93002FCDAA /* MyRankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRankViewController.h; sourceTree = "<group>"; };
-		989EBF1B1A147B93002FCDAA /* MyRankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRankViewController.m; sourceTree = "<group>"; };
 		989EBF1C1A147B93002FCDAA /* RankingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingTableViewCell.h; sourceTree = "<group>"; };
 		989EBF1D1A147B93002FCDAA /* RankingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingTableViewCell.m; sourceTree = "<group>"; };
 		989EBF1E1A147B93002FCDAA /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -148,18 +142,14 @@
 		989EBF821A159563002FCDAA /* Button_Shikan_140x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Shikan_140x100.png; sourceTree = "<group>"; };
 		989EBF841A15E4D0002FCDAA /* VSModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSModeViewController.h; sourceTree = "<group>"; };
 		989EBF851A15E4D0002FCDAA /* VSModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSModeViewController.m; sourceTree = "<group>"; };
-		989EBF871A1618F9002FCDAA /* MyShiroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyShiroView.h; sourceTree = "<group>"; };
-		989EBF881A1618F9002FCDAA /* MyShiroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyShiroView.m; sourceTree = "<group>"; };
-		989EBF8A1A1619AF002FCDAA /* VSShiroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSShiroView.h; sourceTree = "<group>"; };
-		989EBF8B1A1619AF002FCDAA /* VSShiroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSShiroView.m; sourceTree = "<group>"; };
-		989EBF8D1A17825A002FCDAA /* MyShiroView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyShiroView.xib; sourceTree = "<group>"; };
-		989EBF8F1A17828B002FCDAA /* VSShiroView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VSShiroView.xib; sourceTree = "<group>"; };
-		989EBF911A178E96002FCDAA /* ShiroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShiroView.h; sourceTree = "<group>"; };
-		989EBF921A178E96002FCDAA /* ShiroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShiroView.m; sourceTree = "<group>"; };
 		989EBF941A17D20C002FCDAA /* VSRankTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSRankTableViewCell.h; sourceTree = "<group>"; };
 		989EBF951A17D20C002FCDAA /* VSRankTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSRankTableViewCell.m; sourceTree = "<group>"; };
 		989EBF9A1A189457002FCDAA /* war_taiji_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_taiji_1.png; sourceTree = "<group>"; };
 		989EBF9B1A189457002FCDAA /* war_taiji_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_taiji_2.png; sourceTree = "<group>"; };
+		989EBF9E1A18FC0E002FCDAA /* VSRanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSRanTableViewCell.h; sourceTree = "<group>"; };
+		989EBF9F1A18FC0E002FCDAA /* VSRanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSRanTableViewCell.m; sourceTree = "<group>"; };
+		989EBFA11A18FE29002FCDAA /* MyRanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRanTableViewCell.h; sourceTree = "<group>"; };
+		989EBFA21A18FE29002FCDAA /* MyRanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRanTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,24 +197,18 @@
 				989EBEAC1A147A2C002FCDAA /* AppDelegate.m */,
 				989EBF841A15E4D0002FCDAA /* VSModeViewController.h */,
 				989EBF851A15E4D0002FCDAA /* VSModeViewController.m */,
+				989EBF9E1A18FC0E002FCDAA /* VSRanTableViewCell.h */,
+				989EBF9F1A18FC0E002FCDAA /* VSRanTableViewCell.m */,
+				989EBFA11A18FE29002FCDAA /* MyRanTableViewCell.h */,
+				989EBFA21A18FE29002FCDAA /* MyRanTableViewCell.m */,
 				989EBF941A17D20C002FCDAA /* VSRankTableViewCell.h */,
 				989EBF951A17D20C002FCDAA /* VSRankTableViewCell.m */,
 				989EBF181A147B93002FCDAA /* MyRankTableViewCell.h */,
 				989EBF191A147B93002FCDAA /* MyRankTableViewCell.m */,
-				989EBF911A178E96002FCDAA /* ShiroView.h */,
-				989EBF921A178E96002FCDAA /* ShiroView.m */,
-				989EBF8D1A17825A002FCDAA /* MyShiroView.xib */,
-				989EBF871A1618F9002FCDAA /* MyShiroView.h */,
-				989EBF881A1618F9002FCDAA /* MyShiroView.m */,
-				989EBF8F1A17828B002FCDAA /* VSShiroView.xib */,
-				989EBF8A1A1619AF002FCDAA /* VSShiroView.h */,
-				989EBF8B1A1619AF002FCDAA /* VSShiroView.m */,
 				989EBECD1A147B93002FCDAA /* CameraViewController.h */,
 				989EBECE1A147B93002FCDAA /* CameraViewController.m */,
 				989EBF141A147B93002FCDAA /* JapanViewController.h */,
 				989EBF151A147B93002FCDAA /* JapanViewController.m */,
-				989EBF1A1A147B93002FCDAA /* MyRankViewController.h */,
-				989EBF1B1A147B93002FCDAA /* MyRankViewController.m */,
 				989EBF1C1A147B93002FCDAA /* RankingTableViewCell.h */,
 				989EBF1D1A147B93002FCDAA /* RankingTableViewCell.m */,
 				989EBF1E1A147B93002FCDAA /* RankingViewController.h */,
@@ -416,7 +400,6 @@
 				989EBF9D1A189457002FCDAA /* war_taiji_2.png in Resources */,
 				989EBF241A147B93002FCDAA /* Button_Camera_100x50.png in Resources */,
 				989EBF221A147B93002FCDAA /* Button_Album_100x50.png in Resources */,
-				989EBF901A17828B002FCDAA /* VSShiroView.xib in Resources */,
 				989EBEB81A147A2C002FCDAA /* LaunchScreen.xib in Resources */,
 				989EBF5D1A147B93002FCDAA /* Icon-Small@2x.png in Resources */,
 				989EBF5F1A147B93002FCDAA /* Icon.png in Resources */,
@@ -446,7 +429,6 @@
 				989EBF5B1A147B93002FCDAA /* Icon-Small-50@2x.png in Resources */,
 				989EBF311A147B93002FCDAA /* Japanese_color.png in Resources */,
 				989EBF591A147B93002FCDAA /* Icon-76@2x.png in Resources */,
-				989EBF8E1A17825A002FCDAA /* MyShiroView.xib in Resources */,
 				989EBF791A14807B002FCDAA /* Ranking_@1x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,16 +447,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				989EBFA01A18FC0E002FCDAA /* VSRanTableViewCell.m in Sources */,
 				989EBF661A147B93002FCDAA /* MyRankTableViewCell.m in Sources */,
-				989EBF671A147B93002FCDAA /* MyRankViewController.m in Sources */,
 				989EBF201A147B93002FCDAA /* CameraViewController.m in Sources */,
 				989EBEAD1A147A2C002FCDAA /* AppDelegate.m in Sources */,
+				989EBFA31A18FE29002FCDAA /* MyRanTableViewCell.m in Sources */,
 				989EBF861A15E4D0002FCDAA /* VSModeViewController.m in Sources */,
 				989EBF681A147B93002FCDAA /* RankingTableViewCell.m in Sources */,
-				989EBF931A178E96002FCDAA /* ShiroView.m in Sources */,
 				989EBF961A17D20C002FCDAA /* VSRankTableViewCell.m in Sources */,
-				989EBF8C1A1619AF002FCDAA /* VSShiroView.m in Sources */,
-				989EBF891A1618F9002FCDAA /* MyShiroView.m in Sources */,
 				989EBF641A147B93002FCDAA /* JapanViewController.m in Sources */,
 				989EBEAA1A147A2C002FCDAA /* main.m in Sources */,
 				989EBF691A147B93002FCDAA /* RankingViewController.m in Sources */,
