@@ -9,6 +9,9 @@
 #import "VSModeViewController.h"
 
 #import "AppDelegate.h"
+#import "RankTableViewCell.h"
+#import "VSRankTableViewCell.h"
+#import "MyRankTableViewCell.h"
 
 @interface VSModeViewController ()
 {
@@ -20,6 +23,8 @@
 	NSMutableArray *array_Like;
 	
 	BOOL bool_Error;
+
+	NSInteger integer_Height;
 	
 }
 
@@ -41,7 +46,7 @@
 	
 	app.bool_MyRank = YES;
 	bool_Error = NO;
-	
+
 }
 
 - (void)viewWillAppear: (BOOL)animated
@@ -72,7 +77,7 @@
 			if ( [str_shiro isEqualToString: app.string_Shikan] ) {
 				
 				//自分が気に入っている城の前後のランキング情報を取る処理
-				for ( NSInteger k = i - 2; k <= i + 2 ; k ++ ) {
+				for ( NSInteger k = i - 1; k <= i + 1 ; k ++ ) {
 					
 					if ( ( k >= 0 ) && ( k < [array count] ) ) {
 						
@@ -83,7 +88,56 @@
 						NSNumber *number = [NSNumber numberWithInteger: k + 1];
 						
 						[dic_add setObject: number forKey: @"rankno"];
-						
+				
+						NSString *str_shiro = [dic_add objectForKey: @"shironame"];
+						if ( [str_shiro isEqualToString: app.string_Shikan] ) {
+
+							[dic_add setObject: @"now" forKey: @"genjyou"];
+							
+							NSInteger int_back = k - 1;
+							if ( int_back < 0 ) {
+								[dic_add setObject: @"NO"  forKey: @"back_data"];
+							} else {
+								[dic_add setObject: @"YES" forKey: @"back_data"];
+								
+								NSDictionary *dic_back  = [array objectAtIndex: int_back];
+								NSString *str_tag_count = [dic_back objectForKey: @"tagcount"];
+								NSInteger int_tag_back  = str_tag_count.integerValue;
+								
+								str_tag_count           = [dic_add  objectForKey: @"tagcount"];
+								NSInteger int_tag_now   = str_tag_count.integerValue;
+								
+								str_tag_count = [NSString stringWithFormat:
+												 @"下剋上するまで %d 枚", (int)( int_tag_back - int_tag_now )];
+							
+								[dic_add setObject: str_tag_count forKey: @"下剋上_1"];
+							}
+							
+							NSInteger int_next = k + 1;
+							if ( int_next > [array count] ) {
+								[dic_add setObject: @"NO"  forKey: @"next_data"];
+							} else {
+								[dic_add setObject: @"YES" forKey: @"next_data"];
+								
+								NSString *str_tag_count = [dic_add  objectForKey: @"tagcount"];
+								NSInteger int_tag_now   = str_tag_count.integerValue;
+
+								NSDictionary *dic_next  = [array objectAtIndex: int_next];
+								str_tag_count           = [dic_next objectForKey: @"tagcount"];
+								NSInteger int_tag_next  = str_tag_count.integerValue;
+								
+								
+								str_tag_count = [NSString stringWithFormat:
+												 @"下剋上されるまで %d 枚", (int)( int_tag_now - int_tag_next )];
+								
+								[dic_add setObject: str_tag_count forKey: @"下剋上_2"];
+							}
+							
+						} else {
+
+							[dic_add setObject: @"now" forKey: @"genjyou"];
+						}
+
 						[array_Like addObject: dic_add];
 						
 					}
@@ -103,6 +157,10 @@
 		[self.tableView reloadData];
 		
 		if ( bool_Error == YES ) {
+			
+			app.bool_MyRank = YES;
+			
+		} else {
 			
 			app.bool_MyRank = NO;
 			
@@ -157,94 +215,195 @@
 		 cellForRowAtIndexPath: (NSIndexPath *)indexPath
 {
 	
-	//Shiro_MyRankという印がついた再利用可能なセルを格納
-	MyRankTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Shiro_MyRank"];
-	
-	//セルが再利用できないかどうか
-	if ( ! cell ) {
-		
-		NSLog( @"新規作成" );
-		cell = [[MyRankTableViewCell alloc] initWithStyle: UITableViewCellStyleDefault
-										  reuseIdentifier: @"Shiro_MyRank"];
-		
-	}
-	
-	//array_Likeの[indexpath.row]番目の要素((indexpath.row+1)位の城に関する情報)を格納
 	NSDictionary *dic = array_Like[indexPath.row];
 	
+	NSString *shiro_name = [dic objectForKey: @"shironame"];
 	
-	dispatch_queue_t q_global = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-	dispatch_queue_t q_main   = dispatch_get_main_queue();
-	
-	cell.imageView_Shiro.image = nil;
-	
-	dispatch_async( q_global, ^{
+	if ( [shiro_name isEqualToString: app.string_Shikan] ) {
 		
-		UIImage *image = [self WebImage:[dic objectForKey: @"imagename"]];
+		MyRankTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Shiro_MyRank"];
 		
-		dispatch_async( q_main, ^{
+		integer_Height = tableView.frame.size.width - 16;
+		
+		cell.imageView_Shiro.translatesAutoresizingMaskIntoConstraints = YES;
+		cell.imageView_Shiro.frame = CGRectMake( 8, 8, integer_Height, integer_Height );
+
+		dispatch_queue_t q_global = dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0 );
+		dispatch_queue_t q_main   = dispatch_get_main_queue();
+		
+		dispatch_async( q_global, ^{
 			
-			cell.imageView_Shiro.image = image;
-			cell.imageView_Shiro.contentMode = UIViewContentModeScaleAspectFit;
+			UIImage *image = [self WebImage: [dic objectForKey: @"imagename"]];
+			
+			dispatch_async( q_main, ^{
+				
+				cell.imageView_Shiro.image       = image;
+				cell.imageView_Shiro.contentMode = UIViewContentModeScaleAspectFit;
+				cell.imageView_Shiro.alpha       = 0.5;
+				
+			});
 			
 		});
 		
-	});
-	
-	
-	NSNumber *number = [dic objectForKey: @"rankno"];
-	
-	cell.label_Rank.text = [NSString stringWithFormat: @"第%d位", [number intValue]];
-	
-	//shirolabelを城の名前を表示するように設定
-	cell.label_Shiro.text = [dic objectForKey: @"shironame"];
-	//タグの投稿数の文字列を格納
-	
-	NSString *tagcount = [dic objectForKey: @"tagcount"];
-	//ブロックに関する文字列を格納
-	NSString *block = [dic objectForKey: @"block"];
-	
-	//taglabelをブロックとタグの投稿数を表示するように設定
-	cell.label_Comment.text = [NSString stringWithFormat: @"ブロック:%@\nタグの投稿数:%@", block, tagcount];
-	
-	//自分が気に入っている城であるかどうか
-	if ( [cell.label_Shiro.text isEqualToString: app.string_Shikan] ) {
+		NSString *str_back = [dic objectForKey: @"back_data"];
+		if ( [str_back isEqualToString: @"YES"] ) {
+			
+			cell.imageView_My_1.image = [UIImage imageNamed: @"war_taiji_2.png"];
+			
+			cell.label_Gekokyu_1.text = [dic objectForKey: @"下剋上_1"];
+
+		}
 		
+		NSNumber *number = [dic objectForKey: @"rankno"];
+		
+		cell.label_Rank.text = [NSString stringWithFormat: @"第%d位", [number intValue]];
+		
+		//shirolabelを城の名前を表示するように設定
+		cell.label_Shiro.text = shiro_name;
+
+		//タグの投稿数の文字列を格納
+		NSString *tagcount = [dic objectForKey: @"tagcount"];
+
+		//ブロックに関する文字列を格納
+		NSString *block = [dic objectForKey: @"block"];
+		
+		//taglabelをブロックとタグの投稿数を表示するように設定
+		cell.label_Comment.text = [NSString stringWithFormat: @"ブロック:%@ タグの投稿数:%@", block, tagcount];
+		
+		NSString *str_next = [dic objectForKey: @"next_data"];
+		if ( [str_next isEqualToString: @"YES"] ) {
+			
+			cell.imageView_My_2.image = [UIImage imageNamed: @"war_taiji_1.png"];
+			
+			cell.label_Gekokyu_2.text = [dic objectForKey: @"下剋上_2"];
+			
+		}
+
 		//文字の色を変える
-		cell.label_Rank.textColor    = [UIColor colorWithRed: ( 30.0) / 255.0
-													   green: (144.0) / 255.0
-														blue: (255.0) / 255.0
-													   alpha: 1.0];
-		
-		cell.label_Shiro.textColor   = [UIColor colorWithRed: ( 30.0) / 255.0
-													   green: (144.0) / 255.0
-														blue: (255.0) / 255.0
-													   alpha: 1.0];
-		
-		cell.label_Comment.textColor = [UIColor colorWithRed: ( 30.0) / 255.0
-													   green: (144.0) / 255.0
-														blue: (255.0) / 255.0
-													   alpha: 1.0];
+		cell.label_Gekokyu_1.textColor =
+		cell.label_Rank.textColor      =
+		cell.label_Shiro.textColor     =
+		cell.label_Comment.textColor   =
+		cell.label_Gekokyu_2.textColor = [UIColor colorWithRed: ( 30.0) / 255.0
+														 green: (144.0) / 255.0
+														  blue: (255.0) / 255.0
+														 alpha: 1.0];
+
+		return cell;
 		
 	} else {
 		
-		cell.label_Rank.textColor    = [UIColor blackColor];
-		cell.label_Shiro.textColor   = [UIColor blackColor];
-		cell.label_Comment.textColor = [UIColor blackColor];
+		VSRankTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Shiro_VSRank"];
 		
+		dispatch_queue_t q_global = dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0 );
+		dispatch_queue_t q_main   = dispatch_get_main_queue();
+		
+		cell.imageView_Shiro.image = nil;
+		
+		dispatch_async( q_global, ^{
+			
+			UIImage *image = [self WebImage: [dic objectForKey: @"imagename"]];
+			
+			dispatch_async( q_main, ^{
+				
+				cell.imageView_Shiro.image = image;
+				cell.imageView_Shiro.contentMode = UIViewContentModeScaleAspectFit;
+				
+			});
+			
+		});
+		
+		NSNumber *number = [dic objectForKey: @"rankno"];
+		
+		cell.label_Rank.text = [NSString stringWithFormat: @"第%d位", [number intValue]];
+		
+		//shirolabelを城の名前を表示するように設定
+		cell.label_Shiro.text = shiro_name;
+
+		//タグの投稿数の文字列を格納
+		NSString *tagcount = [dic objectForKey: @"tagcount"];
+		
+		//ブロックに関する文字列を格納
+		NSString *block = [dic objectForKey: @"block"];
+		
+		//taglabelをブロックとタグの投稿数を表示するように設定
+		cell.label_Comment.text = [NSString stringWithFormat: @"ブロック:%@ タグの投稿数:%@", block, tagcount];
+		
+		cell.imageView_VS_1.image = nil;
+		cell.imageView_VS_2.image = nil;
+		
+//		cell.label_Rank.textColor    = [UIColor blackColor];
+//		cell.label_Shiro.textColor   = [UIColor blackColor];
+//		cell.label_Comment.textColor = [UIColor blackColor];
+		
+		return cell;
+
 	}
 	
-	return cell;
+	
+//	NSNumber *number = [dic objectForKey: @"rankno"];
+//	
+//	cell.label_Rank.text = [NSString stringWithFormat: @"第%d位", [number intValue]];
+//	
+//	//shirolabelを城の名前を表示するように設定
+//	cell.label_Shiro.text = [dic objectForKey: @"shironame"];
+//	//タグの投稿数の文字列を格納
+//	
+//	NSString *tagcount = [dic objectForKey: @"tagcount"];
+//	//ブロックに関する文字列を格納
+//	NSString *block = [dic objectForKey: @"block"];
+//	
+//	//taglabelをブロックとタグの投稿数を表示するように設定
+//	cell.label_Comment.text = [NSString stringWithFormat: @"ブロック:%@\nタグの投稿数:%@", block, tagcount];
+//	
+//	//自分が気に入っている城であるかどうか
+//	if ( [cell.label_Shiro.text isEqualToString: app.string_Shikan] ) {
+//		
+//		//文字の色を変える
+//		cell.label_Rank.textColor    = [UIColor colorWithRed: ( 30.0) / 255.0
+//													   green: (144.0) / 255.0
+//														blue: (255.0) / 255.0
+//													   alpha: 1.0];
+//		
+//		cell.label_Shiro.textColor   = [UIColor colorWithRed: ( 30.0) / 255.0
+//													   green: (144.0) / 255.0
+//														blue: (255.0) / 255.0
+//													   alpha: 1.0];
+//		
+//		cell.label_Comment.textColor = [UIColor colorWithRed: ( 30.0) / 255.0
+//													   green: (144.0) / 255.0
+//														blue: (255.0) / 255.0
+//													   alpha: 1.0];
+//		
+//	} else {
+//		
+//		cell.label_Rank.textColor    = [UIColor blackColor];
+//		cell.label_Shiro.textColor   = [UIColor blackColor];
+//		cell.label_Comment.textColor = [UIColor blackColor];
+//		
+//	}
+	
+	return nil;
 	
 }
 
-//- (CGFloat)   tableView: (UITableView *)tableView
-//heightForRowAtIndexPath: (NSIndexPath *)indexPath
-//{
-//
-//	return 155;
-//
-//}
+- (CGFloat)   tableView: (UITableView *)tableView
+heightForRowAtIndexPath: (NSIndexPath *)indexPath
+{
+
+	NSDictionary *dic = array_Like[indexPath.row];
+	
+	NSString *shiro_name = [dic objectForKey: @"shironame"];
+	
+	if ( [shiro_name isEqualToString: app.string_Shikan] ) {
+		
+		return tableView.frame.size.width;
+
+	}
+	
+	return 116;
+
+}
 
 //JSONのデータをarray_Like型で返すメソッド
 - (NSArray *)JSONArrayData: (NSString *)url

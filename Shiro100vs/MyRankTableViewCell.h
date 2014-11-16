@@ -11,9 +11,16 @@
 @interface MyRankTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView_Shiro;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView_My_1;
+
+@property (weak, nonatomic) IBOutlet UILabel *label_Gekokyu_1;
 
 @property (weak, nonatomic) IBOutlet UILabel *label_Rank;
 @property (weak, nonatomic) IBOutlet UILabel *label_Shiro;
 @property (weak, nonatomic) IBOutlet UILabel *label_Comment;
+
+@property (weak, nonatomic) IBOutlet UILabel *label_Gekokyu_2;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView_My_2;
 
 @end

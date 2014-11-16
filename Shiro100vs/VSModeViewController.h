@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VSModeViewController : UIViewController
+@interface VSModeViewController : UITableViewController < UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource >
 
 - (NSArray *)JSONArrayData: (NSString *)url;
 

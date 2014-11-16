@@ -110,7 +110,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQY-hj-yWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="1638"/>
+            <point key="canvasLocation" x="892" y="1627"/>
         </scene>
         <!--今日の城-->
         <scene sceneID="L63-dI-zZj">
@@ -230,7 +230,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iM2-Bx-dgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66" y="-465"/>
+            <point key="canvasLocation" x="66" y="238"/>
+        </scene>
+        <!--今日の城-->
+        <scene sceneID="GAz-OS-tFU">
+            <objects>
+                <viewController id="Wsi-Mx-qto" customClass="VSModeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VIE-ms-kdr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qcq-V9-61p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rA9-Ey-u1M">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qf2-kZ-g65">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qf2-kZ-g65" firstAttribute="leading" secondItem="rA9-Ey-u1M" secondAttribute="leading" id="4Wq-KS-Fgu"/>
+                            <constraint firstAttribute="trailing" secondItem="qf2-kZ-g65" secondAttribute="trailing" id="a5W-EJ-ctC"/>
+                            <constraint firstItem="Qcq-V9-61p" firstAttribute="top" secondItem="qf2-kZ-g65" secondAttribute="bottom" id="qFe-Ms-2zG"/>
+                            <constraint firstItem="qf2-kZ-g65" firstAttribute="top" secondItem="rA9-Ey-u1M" secondAttribute="top" id="qYC-OH-CPA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="今日の城" image="Shiro" id="WX1-nN-8Rh"/>
+                    <connections>
+                        <outlet property="view_Screen" destination="qf2-kZ-g65" id="eia-bd-tgU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aos-UD-3i8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66" y="-1158"/>
         </scene>
         <!--カメラ-->
         <scene sceneID="WMl-mW-tNY">
@@ -286,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VB1-jv-4sT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66" y="232"/>
+            <point key="canvasLocation" x="66" y="-460"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="66O-4d-sCK">
@@ -300,15 +334,170 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Iiy-pA-w3R" kind="relationship" relationship="viewControllers" id="ILT-v8-bUK"/>
+                        <segue destination="Iph-0d-6Vz" kind="relationship" relationship="viewControllers" id="iXY-PI-xoD"/>
                         <segue destination="y0g-ji-Ubm" kind="relationship" relationship="viewControllers" id="eao-Jf-Gtf"/>
+                        <segue destination="Iiy-pA-w3R" kind="relationship" relationship="viewControllers" id="ILT-v8-bUK"/>
                         <segue destination="T7q-D7-MZp" kind="relationship" relationship="viewControllers" id="9aG-Ah-x8F"/>
-                        <segue destination="nkq-EN-bxf" kind="relationship" relationship="viewControllers" id="o26-DY-79q"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lF-GW-Ebg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-781" y="1627"/>
+        </scene>
+        <!--今日の城-->
+        <scene sceneID="TJB-zF-JhM">
+            <objects>
+                <tableViewController id="YL5-Ga-ZfP" customClass="VSModeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="152" sectionHeaderHeight="22" sectionFooterHeight="22" id="5nW-Wk-75A">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Shiro_VSRank" rowHeight="116" id="68C-Q7-ZsI" customClass="VSRankTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="68C-Q7-ZsI" id="LM4-ds-d61">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M8j-5N-552">
+                                            <rect key="frame" x="8" y="8" width="100" height="100"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lK1-mu-a9u">
+                                            <rect key="frame" x="250" y="0.0" width="100" height="50"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sjA-BH-lTl">
+                                            <rect key="frame" x="250" y="66" width="100" height="50"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="城" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkV-IL-PBW">
+                                            <rect key="frame" x="113" y="43" width="479" height="30"/>
+                                            <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="25"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="第９９９位" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEd-JE-v9V">
+                                            <rect key="frame" x="113" y="8" width="172" height="36"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="コメント" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIj-pd-hMT">
+                                            <rect key="frame" x="116" y="69" width="216" height="39"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView_Shiro" destination="M8j-5N-552" id="wn6-pa-hyb"/>
+                                    <outlet property="imageView_VS_1" destination="lK1-mu-a9u" id="JoW-HX-v7y"/>
+                                    <outlet property="imageView_VS_2" destination="sjA-BH-lTl" id="zVC-Q1-2hl"/>
+                                    <outlet property="label_Comment" destination="eIj-pd-hMT" id="oVj-yK-l8Q"/>
+                                    <outlet property="label_Rank" destination="wEd-JE-v9V" id="JgM-Ee-RM3"/>
+                                    <outlet property="label_Shiro" destination="tkV-IL-PBW" id="roD-n6-t8H"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Shiro_MyRank" rowHeight="316" id="eJP-d6-Mic" customClass="MyRankTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eJP-d6-Mic" id="Hb8-4C-3Xs">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-Ir-z2D">
+                                            <rect key="frame" x="8" y="8" width="300" height="300"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYf-ML-J0W">
+                                            <rect key="frame" x="250" y="0.0" width="100" height="50"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="城" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdX-A3-ni1">
+                                            <rect key="frame" x="8" y="135" width="584" height="30"/>
+                                            <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="34"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="第９９９位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dri-Nu-z3e">
+                                            <rect key="frame" x="8" y="91" width="584" height="36"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="コメント" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajy-ea-IIa">
+                                            <rect key="frame" x="8" y="176" width="584" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="下剋上１" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzv-ry-AbC">
+                                            <rect key="frame" x="8" y="58" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="下剋上２" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEb-o0-ARU">
+                                            <rect key="frame" x="8" y="221" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WzE-EB-5Xu">
+                                            <rect key="frame" x="250" y="265" width="100" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Xzv-ry-AbC" secondAttribute="trailing" constant="8" id="1H4-1n-a7Y"/>
+                                        <constraint firstItem="bdX-A3-ni1" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="3Rs-YE-U8n"/>
+                                        <constraint firstAttribute="bottom" secondItem="WzE-EB-5Xu" secondAttribute="bottom" constant="0.5" id="C5N-Jh-riu"/>
+                                        <constraint firstItem="Dri-Nu-z3e" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="Et5-5r-DjK"/>
+                                        <constraint firstAttribute="centerX" secondItem="bYf-ML-J0W" secondAttribute="centerX" id="Kzc-D4-nbT"/>
+                                        <constraint firstItem="bYf-ML-J0W" firstAttribute="top" secondItem="Hb8-4C-3Xs" secondAttribute="top" id="OXF-SP-D3E"/>
+                                        <constraint firstItem="ajy-ea-IIa" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="Pwz-6v-aIp"/>
+                                        <constraint firstAttribute="centerX" secondItem="WzE-EB-5Xu" secondAttribute="centerX" id="R2m-FA-RlN"/>
+                                        <constraint firstAttribute="trailing" secondItem="bdX-A3-ni1" secondAttribute="trailing" constant="8" id="RjP-WL-eVb"/>
+                                        <constraint firstAttribute="trailing" secondItem="ajy-ea-IIa" secondAttribute="trailing" constant="8" id="Wpc-pv-cSD"/>
+                                        <constraint firstAttribute="trailing" secondItem="Dri-Nu-z3e" secondAttribute="trailing" constant="8" id="Yph-Et-sgY"/>
+                                        <constraint firstAttribute="trailing" secondItem="tEb-o0-ARU" secondAttribute="trailing" constant="8" id="Zdz-3w-tyU"/>
+                                        <constraint firstItem="Xzv-ry-AbC" firstAttribute="top" secondItem="bYf-ML-J0W" secondAttribute="bottom" constant="8" id="cpf-zg-j7A"/>
+                                        <constraint firstItem="Xzv-ry-AbC" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="gNb-Q5-Ctx"/>
+                                        <constraint firstItem="tEb-o0-ARU" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="wft-L3-iOo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView_My_1" destination="bYf-ML-J0W" id="YRS-yA-wOx"/>
+                                    <outlet property="imageView_My_2" destination="WzE-EB-5Xu" id="9Xn-tF-CTo"/>
+                                    <outlet property="imageView_Shiro" destination="c3o-Ir-z2D" id="pmY-BB-fvX"/>
+                                    <outlet property="label_Comment" destination="ajy-ea-IIa" id="PgH-vr-IsA"/>
+                                    <outlet property="label_Gekokyu_1" destination="Xzv-ry-AbC" id="ewz-My-DQP"/>
+                                    <outlet property="label_Gekokyu_2" destination="tEb-o0-ARU" id="XfR-K9-eVZ"/>
+                                    <outlet property="label_Rank" destination="Dri-Nu-z3e" id="KyL-MF-NUh"/>
+                                    <outlet property="label_Shiro" destination="bdX-A3-ni1" id="DSD-vR-MQ7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YL5-Ga-ZfP" id="gjV-mA-56P"/>
+                            <outlet property="delegate" destination="YL5-Ga-ZfP" id="hc8-s1-SrM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="今日の城" id="Jfw-O8-nEs"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h10-wP-FIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="-1870"/>
+        </scene>
+        <!--今日の城-->
+        <scene sceneID="S2Q-ji-01H">
+            <objects>
+                <navigationController id="Iph-0d-6Vz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="今日の城" image="Shiro" id="0h6-1m-d7j"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0G1-zS-TWA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YL5-Ga-ZfP" kind="relationship" relationship="rootViewController" id="5PR-fm-KSg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nwd-eo-Kb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66" y="-1870"/>
         </scene>
     </scenes>
     <resources>

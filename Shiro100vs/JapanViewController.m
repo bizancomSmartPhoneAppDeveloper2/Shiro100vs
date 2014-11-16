@@ -43,7 +43,7 @@
 	app = [[UIApplication sharedApplication] delegate];
 
 	[self setGenzai];
-	
+
 }
 
 - (void)didReceiveMemoryWarning

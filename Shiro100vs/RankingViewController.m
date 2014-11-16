@@ -57,8 +57,12 @@
 	
 		if ( bool_Error == YES ) {
 			
-			app.bool_Ranking = NO;
+			app.bool_Ranking = YES;
 			
+		} else {
+			
+			app.bool_Ranking = NO;
+
 		}
 		
 	}
