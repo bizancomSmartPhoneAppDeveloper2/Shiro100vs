@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *label_Shiro;
 @property (weak, nonatomic) IBOutlet UILabel *label_Comment;
 
+@property (weak, nonatomic) IBOutlet UILabel *label_Ato;
+
 @property (weak, nonatomic) IBOutlet UILabel *label_Gekokyu_2;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView_My_2;

@@ -60,9 +60,16 @@
 		
 		array_Like = [[NSMutableArray alloc] init];
 		
-		NSInteger i = 0;
+		NSInteger i = 0, int_ato = 0;
 		
 		for ( NSDictionary *dic in array ) {
+
+			if ( int_ato == 0 ) {
+				
+				NSString *str_ato = [dic objectForKey: @"tagcount"];
+				int_ato = str_ato.integerValue;
+				
+			}
 			
 			NSString *str_shiro = [dic objectForKey: @"shironame"];
 			
@@ -115,6 +122,28 @@
 							[dic_add setObject: @"now" forKey: @"genjyou"];
 						}
 
+						if ( i == 0 ) {
+							
+							NSString *str_ato = [NSString stringWithFormat:
+												 @"天下統一中！！"];
+							
+							[dic_add setObject: str_ato forKey: @"ato_mai"];
+
+						} else {
+							
+							NSString *str_tag = [dic_add objectForKey: @"tagcount"];
+							NSInteger int_tag = str_tag.integerValue;
+							
+							int_ato = int_ato - int_tag + 1;
+							
+							NSString *str_ato = [NSString stringWithFormat:
+												 @"天下統一まで\nあと %d 枚！！",  (int)int_ato];
+							
+							[dic_add setObject: str_ato forKey: @"ato_mai"];
+
+						}
+						
+						
 						[array_Like addObject: dic_add];
 						
 					}
@@ -221,10 +250,10 @@
 						
 						NSMutableDictionary *dic_next = array_Like[i + 1];
 						
-						[dic      setObject: @"" forKey: @"back_image"];
+						[dic      setObject: @"NO" forKey: @"back_image"];
 						
-						[dic_next setObject: @"" forKey: @"back_image"];
-						[dic_next setObject: @"" forKey: @"next_image"];
+						[dic_next setObject: @"NO" forKey: @"back_image"];
+						[dic_next setObject: @"NO" forKey: @"next_image"];
 
 					}
 					
@@ -332,7 +361,9 @@
 		if ( [str_back isEqualToString: @"YES"] ) {
 			
 			NSString *back_image = [dic objectForKey: @"back_image"];
-			cell.imageView_My_1.image = [UIImage imageNamed: back_image];
+//			NSLog( @"11" );
+			cell.imageView_My_1.image = [UIImage imageNamed: [NSString stringWithFormat: @"%@", back_image]];
+//			NSLog( @"12" );
 			cell.imageView_My_1.alpha = 0.5;
 			
 			cell.label_Gekokyu_1.text = [dic objectForKey: @"下剋上_1"];
@@ -360,11 +391,26 @@
 		//taglabelをブロックとタグの投稿数を表示するように設定
 		cell.label_Comment.text = [NSString stringWithFormat: @"ブロック:%@\nタグの投稿数:%@", block, tagcount];
 		
+		NSString *str_ato = [dic objectForKey: @"ato_mai"];
+		cell.label_Ato.text      = str_ato;
+
+		CABasicAnimation *theAnimation = [CABasicAnimation animationWithKeyPath: @"opacity"];
+		
+		theAnimation.duration     = 1.0;
+		theAnimation.repeatCount  = 99999999;
+		theAnimation.autoreverses = YES;
+		theAnimation.fromValue    = [NSNumber numberWithFloat: 1.0];
+		theAnimation.toValue      = [NSNumber numberWithFloat: 0.0];
+		
+		[cell.label_Ato.layer addAnimation: theAnimation forKey: @"animateOpacity"];
+		
 		NSString *str_next = [dic objectForKey: @"next_data"];
 		if ( [str_next isEqualToString: @"YES"] ) {
 			
 			NSString *next_image = [dic objectForKey: @"next_image"];
-			cell.imageView_My_2.image = [UIImage imageNamed: next_image];
+//			NSLog( @"21" );
+			cell.imageView_My_2.image = [UIImage imageNamed: [NSString stringWithFormat: @"%@", next_image]];
+//			NSLog( @"22" );
 			cell.imageView_My_2.alpha = 0.5;
 			
 			cell.label_Gekokyu_2.text = [dic objectForKey: @"下剋上_2"];
@@ -417,8 +463,18 @@
 		if ( [str_back isEqualToString: @"YES"] ) {
 			
 			NSString *back_image = [dic objectForKey: @"back_image"];
-			cell.imageView_VS_Down.image = [UIImage imageNamed: back_image];
-			cell.imageView_VS_Down.alpha = 0.5;
+			if ( [back_image isEqualToString: @""] == NO ) {
+				
+//				NSLog( @"31" );
+				cell.imageView_VS_Down.image = [UIImage imageNamed: [NSString stringWithFormat: @"%@", back_image]];
+//				NSLog( @"32" );
+				cell.imageView_VS_Down.alpha = 0.5;
+
+			} else {
+				
+				cell.imageView_VS_Down.image = nil;
+
+			}
 			
 		} else {
 			
@@ -446,8 +502,18 @@
 		if ( [str_next isEqualToString: @"YES"] ) {
 			
 			NSString *next_image = [dic objectForKey: @"next_image"];
-			cell.imageView_VS_Up.image = [UIImage imageNamed: next_image];
-			cell.imageView_VS_Up.alpha = 0.5;
+			if ( [next_image isEqualToString: @""] == NO ) {
+				
+//				NSLog( @"41" );
+				cell.imageView_VS_Up.image = [UIImage imageNamed: [NSString stringWithFormat: @"%@", next_image]];
+//				NSLog( @"42" );
+				cell.imageView_VS_Up.alpha = 0.5;
+
+			} else {
+				
+				cell.imageView_VS_Up.image = nil;
+
+			}
 			
 		} else {
 			
@@ -465,49 +531,6 @@
 		return cell;
 
 	}
-	
-	
-//	NSNumber *number = [dic objectForKey: @"rankno"];
-//	
-//	cell.label_Rank.text = [NSString stringWithFormat: @"第%d位", [number intValue]];
-//	
-//	//shirolabelを城の名前を表示するように設定
-//	cell.label_Shiro.text = [dic objectForKey: @"shironame"];
-//	//タグの投稿数の文字列を格納
-//	
-//	NSString *tagcount = [dic objectForKey: @"tagcount"];
-//	//ブロックに関する文字列を格納
-//	NSString *block = [dic objectForKey: @"block"];
-//	
-//	//taglabelをブロックとタグの投稿数を表示するように設定
-//	cell.label_Comment.text = [NSString stringWithFormat: @"ブロック:%@\nタグの投稿数:%@", block, tagcount];
-//	
-//	//自分が気に入っている城であるかどうか
-//	if ( [cell.label_Shiro.text isEqualToString: app.string_Shikan] ) {
-//		
-//		//文字の色を変える
-//		cell.label_Rank.textColor    = [UIColor colorWithRed: ( 30.0) / 255.0
-//													   green: (144.0) / 255.0
-//														blue: (255.0) / 255.0
-//													   alpha: 1.0];
-//		
-//		cell.label_Shiro.textColor   = [UIColor colorWithRed: ( 30.0) / 255.0
-//													   green: (144.0) / 255.0
-//														blue: (255.0) / 255.0
-//													   alpha: 1.0];
-//		
-//		cell.label_Comment.textColor = [UIColor colorWithRed: ( 30.0) / 255.0
-//													   green: (144.0) / 255.0
-//														blue: (255.0) / 255.0
-//													   alpha: 1.0];
-//		
-//	} else {
-//		
-//		cell.label_Rank.textColor    = [UIColor blackColor];
-//		cell.label_Shiro.textColor   = [UIColor blackColor];
-//		cell.label_Comment.textColor = [UIColor blackColor];
-//		
-//	}
 	
 	return nil;
 	
@@ -548,7 +571,7 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath
 	
 	if ( err ) {
 		
-		NSLog( @"%@", err );
+//		NSLog( @"%@", err );
 		
 		[self setAlertTitle: @"エラー"
 					message: @"サーバーにつながっていません！！"];
@@ -586,7 +609,7 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath
 	
 	if ( err ) {
 		
-		NSLog( @"%@", err );
+//		NSLog( @"%@", err );
 		
 		[self setAlertTitle: @"エラー"
 					message: @"サーバーにつながっていません！！"];
@@ -614,7 +637,7 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath
 	
 	if ( err ) {
 		
-		NSLog( @"%@", err );
+//		NSLog( @"%@", err );
 		
 		[self setAlertTitle: @"エラー"
 					message: @"サーバーにつながっていません！！"];
@@ -671,7 +694,7 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath
 	
 	if ( err ) {
 		
-		NSLog( @"%@", err );
+//		NSLog( @"%@", err );
 		
 		[self setAlertTitle: @"エラー"
 					message: @"サーバーにつながっていません！！"];

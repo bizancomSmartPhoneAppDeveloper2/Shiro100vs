@@ -120,9 +120,9 @@
 	//セルが再利用できないかどうか
 	if ( ! cell ) {
 
-		NSLog( @"新規作成" );
+//		NSLog( @"新規作成" );
 		cell = [[RankingTableViewCell alloc] initWithStyle: UITableViewCellStyleDefault
-										  reuseIdentifier: @"Shiro_Ranking"];
+										   reuseIdentifier: @"Shiro_Ranking"];
 	
 	}
 	
@@ -172,7 +172,7 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath
 	
 	if ( err ) {
 		
-		NSLog( @"%@", err );
+//		NSLog( @"%@", err );
 		
 		[self setAlertTitle: @"エラー"
 					message: @"サーバーにつながっていません！！"];
@@ -210,7 +210,7 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath
 	
 	if ( err ) {
 		
-		NSLog( @"%@", err );
+//		NSLog( @"%@", err );
 		
 		[self setAlertTitle: @"エラー"
 					message: @"サーバーにつながっていません！！"];
@@ -240,7 +240,7 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath
 	
 	if ( err ) {
 		
-		NSLog( @"%@", err );
+//		NSLog( @"%@", err );
 		
 		[self setAlertTitle: @"エラー"
 					message: @"サーバーにつながっていません！！"];
@@ -297,7 +297,7 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath
 	
 	if ( err ) {
 		
-		NSLog( @"%@", err );
+//		NSLog( @"%@", err );
 		
 		[self setAlertTitle: @"エラー"
 					message: @"サーバーにつながっていません！！"];

@@ -18,10 +18,7 @@
 		989EBF241A147B93002FCDAA /* Button_Camera_100x50.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBED31A147B93002FCDAA /* Button_Camera_100x50.png */; };
 		989EBF261A147B93002FCDAA /* Button_Modoru_100x50.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBED51A147B93002FCDAA /* Button_Modoru_100x50.png */; };
 		989EBF281A147B93002FCDAA /* Button_Shikan_150x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBED71A147B93002FCDAA /* Button_Shikan_150x120.png */; };
-		989EBF291A147B93002FCDAA /* Camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBED81A147B93002FCDAA /* Camera.png */; };
 		989EBF311A147B93002FCDAA /* Japanese_color.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBEE01A147B93002FCDAA /* Japanese_color.png */; };
-		989EBF321A147B93002FCDAA /* Japanese_color_.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBEE11A147B93002FCDAA /* Japanese_color_.png */; };
-		989EBF3A1A147B93002FCDAA /* Ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBEE91A147B93002FCDAA /* Ranking.png */; };
 		989EBF501A147B93002FCDAA /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF001A147B93002FCDAA /* Icon-40.png */; };
 		989EBF511A147B93002FCDAA /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF011A147B93002FCDAA /* Icon-40@2x.png */; };
 		989EBF521A147B93002FCDAA /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF021A147B93002FCDAA /* Icon-40@3x.png */; };
@@ -95,10 +92,7 @@
 		989EBED31A147B93002FCDAA /* Button_Camera_100x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Camera_100x50.png; sourceTree = "<group>"; };
 		989EBED51A147B93002FCDAA /* Button_Modoru_100x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Modoru_100x50.png; sourceTree = "<group>"; };
 		989EBED71A147B93002FCDAA /* Button_Shikan_150x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Shikan_150x120.png; sourceTree = "<group>"; };
-		989EBED81A147B93002FCDAA /* Camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera.png; sourceTree = "<group>"; };
 		989EBEE01A147B93002FCDAA /* Japanese_color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Japanese_color.png; sourceTree = "<group>"; };
-		989EBEE11A147B93002FCDAA /* Japanese_color_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Japanese_color_.png; sourceTree = "<group>"; };
-		989EBEE91A147B93002FCDAA /* Ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ranking.png; sourceTree = "<group>"; };
 		989EBF001A147B93002FCDAA /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		989EBF011A147B93002FCDAA /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		989EBF021A147B93002FCDAA /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
@@ -249,7 +243,6 @@
 				989EBED31A147B93002FCDAA /* Button_Camera_100x50.png */,
 				989EBED51A147B93002FCDAA /* Button_Modoru_100x50.png */,
 				989EBED71A147B93002FCDAA /* Button_Shikan_150x120.png */,
-				989EBED81A147B93002FCDAA /* Camera.png */,
 				989EBF6A1A147D71002FCDAA /* Camera_@1x.png */,
 				989EBF6B1A147D71002FCDAA /* Camera_@2x.png */,
 				989EBF6C1A147D71002FCDAA /* Camera_@3x.png */,
@@ -257,11 +250,9 @@
 				989EBF711A147EEC002FCDAA /* Japanese_@2x.png */,
 				989EBF721A147EEC002FCDAA /* Japanese_@3x.png */,
 				989EBEE01A147B93002FCDAA /* Japanese_color.png */,
-				989EBEE11A147B93002FCDAA /* Japanese_color_.png */,
 				989EBF7C1A14827B002FCDAA /* Shiro_@1x.png */,
 				989EBF7D1A14827B002FCDAA /* Shiro_@2x.png */,
 				989EBF7E1A14827B002FCDAA /* Shiro_@3x.png */,
-				989EBEE91A147B93002FCDAA /* Ranking.png */,
 				989EBF761A14807B002FCDAA /* Ranking_@1x.png */,
 				989EBF771A14807B002FCDAA /* Ranking_@2x.png */,
 				989EBF781A14807B002FCDAA /* Ranking_@3x.png */,
@@ -392,7 +383,6 @@
 				989EBF531A147B93002FCDAA /* Icon-60.png in Resources */,
 				989EBF581A147B93002FCDAA /* Icon-76.png in Resources */,
 				989EBF6D1A147D71002FCDAA /* Camera_@1x.png in Resources */,
-				989EBF3A1A147B93002FCDAA /* Ranking.png in Resources */,
 				989EBFAB1A19085C002FCDAA /* war_taiji_2.png in Resources */,
 				989EBF241A147B93002FCDAA /* Button_Camera_100x50.png in Resources */,
 				989EBF221A147B93002FCDAA /* Button_Album_100x50.png in Resources */,
@@ -400,7 +390,6 @@
 				989EBF5D1A147B93002FCDAA /* Icon-Small@2x.png in Resources */,
 				989EBF5F1A147B93002FCDAA /* Icon.png in Resources */,
 				989EBF541A147B93002FCDAA /* Icon-60@2x.png in Resources */,
-				989EBF321A147B93002FCDAA /* Japanese_color_.png in Resources */,
 				989EBF7A1A14807B002FCDAA /* Ranking_@2x.png in Resources */,
 				989EBF551A147B93002FCDAA /* Icon-60@3x.png in Resources */,
 				989EBF7B1A14807B002FCDAA /* Ranking_@3x.png in Resources */,
@@ -422,7 +411,6 @@
 				989EBF5E1A147B93002FCDAA /* Icon-Small@3x.png in Resources */,
 				989EBF561A147B93002FCDAA /* Icon-72.png in Resources */,
 				989EBF811A14827B002FCDAA /* Shiro_@3x.png in Resources */,
-				989EBF291A147B93002FCDAA /* Camera.png in Resources */,
 				989EBF6E1A147D71002FCDAA /* Camera_@2x.png in Resources */,
 				989EBF5B1A147B93002FCDAA /* Icon-Small-50@2x.png in Resources */,
 				989EBF311A147B93002FCDAA /* Japanese_color.png in Resources */,
@@ -518,6 +506,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "/Users/tenobu/ソフト開発/Universal v6/Shiro100vs/Shiro100vs/Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -559,6 +548,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = "/Users/tenobu/ソフト開発/Universal v6/Shiro100vs/Shiro100vs/Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -577,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Shiro100vs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -589,6 +580,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Shiro100vs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -605,6 +597,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -624,6 +617,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Shiro100vsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

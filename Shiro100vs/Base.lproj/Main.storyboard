@@ -266,7 +266,7 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="城" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkV-IL-PBW">
                                             <rect key="frame" x="113" y="43" width="479" height="30"/>
-                                            <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="25"/>
+                                            <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="22"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -306,24 +306,29 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eJP-d6-Mic" id="Hb8-4C-3Xs">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-Ir-z2D"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-Ir-z2D">
+                                            <rect key="frame" x="8" y="8" width="300" height="300"/>
+                                        </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYf-ML-J0W">
                                             <rect key="frame" x="250" y="0.0" width="100" height="50"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="城" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdX-A3-ni1">
-                                            <rect key="frame" x="8" y="135" width="584" height="30"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WzE-EB-5Xu">
+                                            <rect key="frame" x="250" y="265" width="100" height="50"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="城" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdX-A3-ni1">
+                                            <rect key="frame" x="8" y="102" width="584" height="30"/>
                                             <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="33"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="第９９９位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dri-Nu-z3e">
-                                            <rect key="frame" x="8" y="91" width="584" height="36"/>
+                                            <rect key="frame" x="8" y="58" width="584" height="36"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コメント" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajy-ea-IIa">
-                                            <rect key="frame" x="8" y="168" width="584" height="52"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="コメント" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajy-ea-IIa">
+                                            <rect key="frame" x="8" y="140" width="584" height="52"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="52" id="eqk-II-ywW"/>
                                             </constraints>
@@ -331,18 +336,21 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="下剋上１" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzv-ry-AbC">
-                                            <rect key="frame" x="8" y="58" width="584" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下剋上１" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzv-ry-AbC">
+                                            <rect key="frame" x="8" y="29" width="584" height="20.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WzE-EB-5Xu">
-                                            <rect key="frame" x="250" y="265" width="100" height="50"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="下剋上２" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEb-o0-ARU">
-                                            <rect key="frame" x="8" y="236" width="584" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="下剋上２" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEb-o0-ARU">
+                                            <rect key="frame" x="8" y="266" width="584" height="20.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="あと 枚！！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyS-hY-gww">
+                                            <rect key="frame" x="8" y="200" width="584" height="57"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -353,7 +361,7 @@
                                         <constraint firstItem="ajy-ea-IIa" firstAttribute="centerX" secondItem="WzE-EB-5Xu" secondAttribute="centerX" id="9af-ey-1PT"/>
                                         <constraint firstAttribute="bottom" secondItem="WzE-EB-5Xu" secondAttribute="bottom" constant="0.5" id="C5N-Jh-riu"/>
                                         <constraint firstItem="Dri-Nu-z3e" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="Et5-5r-DjK"/>
-                                        <constraint firstItem="WzE-EB-5Xu" firstAttribute="top" secondItem="tEb-o0-ARU" secondAttribute="bottom" constant="8" id="IM4-Ql-qfZ"/>
+                                        <constraint firstItem="hyS-hY-gww" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="JDw-JM-3zk"/>
                                         <constraint firstAttribute="centerX" secondItem="bYf-ML-J0W" secondAttribute="centerX" id="Kzc-D4-nbT"/>
                                         <constraint firstItem="bYf-ML-J0W" firstAttribute="top" secondItem="Hb8-4C-3Xs" secondAttribute="top" id="OXF-SP-D3E"/>
                                         <constraint firstItem="ajy-ea-IIa" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="Pwz-6v-aIp"/>
@@ -363,17 +371,19 @@
                                         <constraint firstAttribute="trailing" secondItem="ajy-ea-IIa" secondAttribute="trailing" constant="8" id="Wpc-pv-cSD"/>
                                         <constraint firstAttribute="trailing" secondItem="Dri-Nu-z3e" secondAttribute="trailing" constant="8" id="Yph-Et-sgY"/>
                                         <constraint firstAttribute="trailing" secondItem="tEb-o0-ARU" secondAttribute="trailing" constant="8" id="Zdz-3w-tyU"/>
-                                        <constraint firstItem="Xzv-ry-AbC" firstAttribute="top" secondItem="bYf-ML-J0W" secondAttribute="bottom" constant="8" id="cpf-zg-j7A"/>
-                                        <constraint firstItem="ajy-ea-IIa" firstAttribute="top" secondItem="bdX-A3-ni1" secondAttribute="bottom" constant="3" id="dBn-cn-0o4"/>
+                                        <constraint firstAttribute="bottom" secondItem="tEb-o0-ARU" secondAttribute="bottom" constant="30" id="dpX-X8-pL9"/>
                                         <constraint firstItem="Xzv-ry-AbC" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="gNb-Q5-Ctx"/>
-                                        <constraint firstAttribute="bottom" secondItem="ajy-ea-IIa" secondAttribute="bottom" constant="95.5" id="kYR-2H-k9Z"/>
+                                        <constraint firstItem="WzE-EB-5Xu" firstAttribute="top" secondItem="hyS-hY-gww" secondAttribute="bottom" constant="16" id="naQ-Xr-0ic"/>
+                                        <constraint firstItem="Xzv-ry-AbC" firstAttribute="top" secondItem="Hb8-4C-3Xs" secondAttribute="top" constant="29" id="rzK-Qf-AST"/>
                                         <constraint firstItem="tEb-o0-ARU" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="wft-L3-iOo"/>
+                                        <constraint firstAttribute="trailing" secondItem="hyS-hY-gww" secondAttribute="trailing" constant="8" id="y8Y-tX-ATJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imageView_My_1" destination="bYf-ML-J0W" id="rA5-qR-daR"/>
                                     <outlet property="imageView_My_2" destination="WzE-EB-5Xu" id="o7U-0G-fek"/>
                                     <outlet property="imageView_Shiro" destination="c3o-Ir-z2D" id="pmY-BB-fvX"/>
+                                    <outlet property="label_Ato" destination="hyS-hY-gww" id="pke-hW-UEY"/>
                                     <outlet property="label_Comment" destination="ajy-ea-IIa" id="PgH-vr-IsA"/>
                                     <outlet property="label_Gekokyu_1" destination="Xzv-ry-AbC" id="wye-Zb-5Jy"/>
                                     <outlet property="label_Gekokyu_2" destination="tEb-o0-ARU" id="IIa-9Q-Py9"/>

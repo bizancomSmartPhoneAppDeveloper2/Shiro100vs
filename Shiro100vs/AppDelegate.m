@@ -56,8 +56,8 @@
 	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
 	
 	self.string_Shikan = [ud objectForKey: @"shiro100_shikan"];
-	
-	NSLog( @"1 get %@", self.string_Shikan );
+
+//	NSLog( @"1 get %@", self.string_Shikan );
 	
 	if ( self.string_Shikan == nil ) {
 		
@@ -65,7 +65,7 @@
 		
 	}
 
-	NSLog( @"2 get %@", self.string_Shikan );
+//	NSLog( @"2 get %@", self.string_Shikan );
 	
 }
 
@@ -76,7 +76,7 @@
 	
 	[ud setObject: self.string_Shikan forKey: @"shiro100_shikan"];
 	
-	NSLog( @"put %@", self.string_Shikan );
+//	NSLog( @"put %@", self.string_Shikan );
 	
 }
 

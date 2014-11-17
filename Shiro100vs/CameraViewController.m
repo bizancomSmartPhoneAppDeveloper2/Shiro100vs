@@ -139,7 +139,7 @@ didFinishPickingMediaWithInfo: (NSDictionary *)info
 								 metadata: nil
 						  completionBlock: ^( NSURL* url, NSError* error ) {
 							  
-							  NSLog(@"Saved: %@<%@>", url, error);
+//							  NSLog( @"Saved: %@<%@>", url, error );
 							  
 						  }];
 
