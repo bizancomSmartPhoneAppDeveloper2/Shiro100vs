@@ -43,7 +43,6 @@
 		989EBF621A147B93002FCDAA /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF121A147B93002FCDAA /* iTunesArtwork.png */; };
 		989EBF631A147B93002FCDAA /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF131A147B93002FCDAA /* iTunesArtwork@2x.png */; };
 		989EBF641A147B93002FCDAA /* JapanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF151A147B93002FCDAA /* JapanViewController.m */; };
-		989EBF661A147B93002FCDAA /* MyRankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF191A147B93002FCDAA /* MyRankTableViewCell.m */; };
 		989EBF681A147B93002FCDAA /* RankingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF1D1A147B93002FCDAA /* RankingTableViewCell.m */; };
 		989EBF691A147B93002FCDAA /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF1F1A147B93002FCDAA /* RankingViewController.m */; };
 		989EBF6D1A147D71002FCDAA /* Camera_@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF6A1A147D71002FCDAA /* Camera_@1x.png */; };
@@ -60,11 +59,12 @@
 		989EBF811A14827B002FCDAA /* Shiro_@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF7E1A14827B002FCDAA /* Shiro_@3x.png */; };
 		989EBF831A159563002FCDAA /* Button_Shikan_140x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF821A159563002FCDAA /* Button_Shikan_140x100.png */; };
 		989EBF861A15E4D0002FCDAA /* VSModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF851A15E4D0002FCDAA /* VSModeViewController.m */; };
-		989EBF961A17D20C002FCDAA /* VSRankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF951A17D20C002FCDAA /* VSRankTableViewCell.m */; };
-		989EBF9C1A189457002FCDAA /* war_taiji_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF9A1A189457002FCDAA /* war_taiji_1.png */; };
-		989EBF9D1A189457002FCDAA /* war_taiji_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBF9B1A189457002FCDAA /* war_taiji_2.png */; };
 		989EBFA01A18FC0E002FCDAA /* VSRanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBF9F1A18FC0E002FCDAA /* VSRanTableViewCell.m */; };
 		989EBFA31A18FE29002FCDAA /* MyRanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBFA21A18FE29002FCDAA /* MyRanTableViewCell.m */; };
+		989EBFA61A190840002FCDAA /* war_sekkin_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFA41A190840002FCDAA /* war_sekkin_1.png */; };
+		989EBFA71A190840002FCDAA /* war_sekkin_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFA51A190840002FCDAA /* war_sekkin_2.png */; };
+		989EBFAA1A19085C002FCDAA /* war_taiji_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFA81A19085C002FCDAA /* war_taiji_1.png */; };
+		989EBFAB1A19085C002FCDAA /* war_taiji_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFA91A19085C002FCDAA /* war_taiji_2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,8 +121,6 @@
 		989EBF131A147B93002FCDAA /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		989EBF141A147B93002FCDAA /* JapanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JapanViewController.h; sourceTree = "<group>"; };
 		989EBF151A147B93002FCDAA /* JapanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JapanViewController.m; sourceTree = "<group>"; };
-		989EBF181A147B93002FCDAA /* MyRankTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRankTableViewCell.h; sourceTree = "<group>"; };
-		989EBF191A147B93002FCDAA /* MyRankTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRankTableViewCell.m; sourceTree = "<group>"; };
 		989EBF1C1A147B93002FCDAA /* RankingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingTableViewCell.h; sourceTree = "<group>"; };
 		989EBF1D1A147B93002FCDAA /* RankingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingTableViewCell.m; sourceTree = "<group>"; };
 		989EBF1E1A147B93002FCDAA /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
@@ -142,14 +140,14 @@
 		989EBF821A159563002FCDAA /* Button_Shikan_140x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Shikan_140x100.png; sourceTree = "<group>"; };
 		989EBF841A15E4D0002FCDAA /* VSModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSModeViewController.h; sourceTree = "<group>"; };
 		989EBF851A15E4D0002FCDAA /* VSModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSModeViewController.m; sourceTree = "<group>"; };
-		989EBF941A17D20C002FCDAA /* VSRankTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSRankTableViewCell.h; sourceTree = "<group>"; };
-		989EBF951A17D20C002FCDAA /* VSRankTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSRankTableViewCell.m; sourceTree = "<group>"; };
-		989EBF9A1A189457002FCDAA /* war_taiji_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_taiji_1.png; sourceTree = "<group>"; };
-		989EBF9B1A189457002FCDAA /* war_taiji_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_taiji_2.png; sourceTree = "<group>"; };
 		989EBF9E1A18FC0E002FCDAA /* VSRanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSRanTableViewCell.h; sourceTree = "<group>"; };
 		989EBF9F1A18FC0E002FCDAA /* VSRanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSRanTableViewCell.m; sourceTree = "<group>"; };
 		989EBFA11A18FE29002FCDAA /* MyRanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRanTableViewCell.h; sourceTree = "<group>"; };
 		989EBFA21A18FE29002FCDAA /* MyRanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRanTableViewCell.m; sourceTree = "<group>"; };
+		989EBFA41A190840002FCDAA /* war_sekkin_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_sekkin_1.png; sourceTree = "<group>"; };
+		989EBFA51A190840002FCDAA /* war_sekkin_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_sekkin_2.png; sourceTree = "<group>"; };
+		989EBFA81A19085C002FCDAA /* war_taiji_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_taiji_1.png; sourceTree = "<group>"; };
+		989EBFA91A19085C002FCDAA /* war_taiji_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_taiji_2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,10 +199,6 @@
 				989EBF9F1A18FC0E002FCDAA /* VSRanTableViewCell.m */,
 				989EBFA11A18FE29002FCDAA /* MyRanTableViewCell.h */,
 				989EBFA21A18FE29002FCDAA /* MyRanTableViewCell.m */,
-				989EBF941A17D20C002FCDAA /* VSRankTableViewCell.h */,
-				989EBF951A17D20C002FCDAA /* VSRankTableViewCell.m */,
-				989EBF181A147B93002FCDAA /* MyRankTableViewCell.h */,
-				989EBF191A147B93002FCDAA /* MyRankTableViewCell.m */,
 				989EBECD1A147B93002FCDAA /* CameraViewController.h */,
 				989EBECE1A147B93002FCDAA /* CameraViewController.m */,
 				989EBF141A147B93002FCDAA /* JapanViewController.h */,
@@ -271,8 +265,10 @@
 				989EBF761A14807B002FCDAA /* Ranking_@1x.png */,
 				989EBF771A14807B002FCDAA /* Ranking_@2x.png */,
 				989EBF781A14807B002FCDAA /* Ranking_@3x.png */,
-				989EBF9A1A189457002FCDAA /* war_taiji_1.png */,
-				989EBF9B1A189457002FCDAA /* war_taiji_2.png */,
+				989EBFA41A190840002FCDAA /* war_sekkin_1.png */,
+				989EBFA51A190840002FCDAA /* war_sekkin_2.png */,
+				989EBFA81A19085C002FCDAA /* war_taiji_1.png */,
+				989EBFA91A19085C002FCDAA /* war_taiji_2.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -397,7 +393,7 @@
 				989EBF581A147B93002FCDAA /* Icon-76.png in Resources */,
 				989EBF6D1A147D71002FCDAA /* Camera_@1x.png in Resources */,
 				989EBF3A1A147B93002FCDAA /* Ranking.png in Resources */,
-				989EBF9D1A189457002FCDAA /* war_taiji_2.png in Resources */,
+				989EBFAB1A19085C002FCDAA /* war_taiji_2.png in Resources */,
 				989EBF241A147B93002FCDAA /* Button_Camera_100x50.png in Resources */,
 				989EBF221A147B93002FCDAA /* Button_Album_100x50.png in Resources */,
 				989EBEB81A147A2C002FCDAA /* LaunchScreen.xib in Resources */,
@@ -407,8 +403,8 @@
 				989EBF321A147B93002FCDAA /* Japanese_color_.png in Resources */,
 				989EBF7A1A14807B002FCDAA /* Ranking_@2x.png in Resources */,
 				989EBF551A147B93002FCDAA /* Icon-60@3x.png in Resources */,
-				989EBF9C1A189457002FCDAA /* war_taiji_1.png in Resources */,
 				989EBF7B1A14807B002FCDAA /* Ranking_@3x.png in Resources */,
+				989EBFAA1A19085C002FCDAA /* war_taiji_1.png in Resources */,
 				989EBF281A147B93002FCDAA /* Button_Shikan_150x120.png in Resources */,
 				989EBF741A147EEC002FCDAA /* Japanese_@2x.png in Resources */,
 				989EBF801A14827B002FCDAA /* Shiro_@2x.png in Resources */,
@@ -418,9 +414,11 @@
 				989EBF7F1A14827B002FCDAA /* Shiro_@1x.png in Resources */,
 				989EBF501A147B93002FCDAA /* Icon-40.png in Resources */,
 				989EBEB51A147A2C002FCDAA /* Images.xcassets in Resources */,
+				989EBFA71A190840002FCDAA /* war_sekkin_2.png in Resources */,
 				989EBF631A147B93002FCDAA /* iTunesArtwork@2x.png in Resources */,
 				989EBF571A147B93002FCDAA /* Icon-72@2x.png in Resources */,
 				989EBF731A147EEC002FCDAA /* Japanese_@1x.png in Resources */,
+				989EBFA61A190840002FCDAA /* war_sekkin_1.png in Resources */,
 				989EBF5E1A147B93002FCDAA /* Icon-Small@3x.png in Resources */,
 				989EBF561A147B93002FCDAA /* Icon-72.png in Resources */,
 				989EBF811A14827B002FCDAA /* Shiro_@3x.png in Resources */,
@@ -448,13 +446,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				989EBFA01A18FC0E002FCDAA /* VSRanTableViewCell.m in Sources */,
-				989EBF661A147B93002FCDAA /* MyRankTableViewCell.m in Sources */,
 				989EBF201A147B93002FCDAA /* CameraViewController.m in Sources */,
 				989EBEAD1A147A2C002FCDAA /* AppDelegate.m in Sources */,
 				989EBFA31A18FE29002FCDAA /* MyRanTableViewCell.m in Sources */,
 				989EBF861A15E4D0002FCDAA /* VSModeViewController.m in Sources */,
 				989EBF681A147B93002FCDAA /* RankingTableViewCell.m in Sources */,
-				989EBF961A17D20C002FCDAA /* VSRankTableViewCell.m in Sources */,
 				989EBF641A147B93002FCDAA /* JapanViewController.m in Sources */,
 				989EBEAA1A147A2C002FCDAA /* main.m in Sources */,
 				989EBF691A147B93002FCDAA /* RankingViewController.m in Sources */,

@@ -66,15 +66,15 @@
 			
 			NSString *str_shiro = [dic objectForKey: @"shironame"];
 			
-			NSString *str_yeano;
-			if ( [str_shiro isEqualToString: app.string_Shikan] ) {
-				str_yeano = @"=";
-			} else {
-				str_yeano = @"≠";
-			}
-			
+//			NSString *str_yeano;
+//			if ( [str_shiro isEqualToString: app.string_Shikan] ) {
+//				str_yeano = @"=";
+//			} else {
+//				str_yeano = @"≠";
+//			}
+//			
 			//気に入っている城の名前と一緒であるかどうか
-			NSLog( @"%d : %@ %@ %@", (int)i , str_shiro, str_yeano, app.string_Shikan );
+//			NSLog( @"%d : %@ %@ %@", (int)i , str_shiro, str_yeano, app.string_Shikan );
 			
 			if ( [str_shiro isEqualToString: app.string_Shikan] ) {
 				
@@ -101,38 +101,13 @@
 								[dic_add setObject: @"NO"  forKey: @"back_data"];
 							} else {
 								[dic_add setObject: @"YES" forKey: @"back_data"];
-								
-								NSDictionary *dic_back  = [array objectAtIndex: int_back];
-								NSString *str_tag_count = [dic_back objectForKey: @"tagcount"];
-								NSInteger int_tag_back  = str_tag_count.integerValue;
-								
-								str_tag_count           = [dic_add  objectForKey: @"tagcount"];
-								NSInteger int_tag_now   = str_tag_count.integerValue;
-								
-								str_tag_count = [NSString stringWithFormat:
-												 @"下剋上するまで %d 枚", (int)( int_tag_back - int_tag_now )];
-							
-								[dic_add setObject: str_tag_count forKey: @"下剋上_1"];
 							}
 							
 							NSInteger int_next = k + 1;
-							if ( int_next > [array count] ) {
+							if ( int_next >= [array count] ) {
 								[dic_add setObject: @"NO"  forKey: @"next_data"];
 							} else {
 								[dic_add setObject: @"YES" forKey: @"next_data"];
-								
-								NSString *str_tag_count = [dic_add  objectForKey: @"tagcount"];
-								NSInteger int_tag_now   = str_tag_count.integerValue;
-
-								NSDictionary *dic_next  = [array objectAtIndex: int_next];
-								str_tag_count           = [dic_next objectForKey: @"tagcount"];
-								NSInteger int_tag_next  = str_tag_count.integerValue;
-								
-								
-								str_tag_count = [NSString stringWithFormat:
-												 @"下剋上されるまで %d 枚", (int)( int_tag_now - int_tag_next )];
-								
-								[dic_add setObject: str_tag_count forKey: @"下剋上_2"];
 							}
 							
 						} else {
@@ -146,9 +121,114 @@
 					
 				}
 				
-				NSLog(@"array_Like のカウントは %d", (int)array_Like.count );
+//				NSLog(@"array_Like のカウントは %d", (int)array_Like.count );
 				
 				break;
+				
+			}
+			
+			i ++;
+			
+		}
+
+		i = 0;
+		
+		for ( NSMutableDictionary *dic in array_Like ) {
+		
+			if ( [[dic objectForKey: @"shironame"] isEqualToString: app.string_Shikan] ) {
+			
+				NSString *str_back = [dic objectForKey: @"back_data"];
+				NSString *str_next = [dic objectForKey: @"next_data"];
+				
+				if ( [str_back isEqualToString: @"YES"] ) {
+					
+					NSMutableDictionary *dic_back = array_Like[0];
+					
+					[dic_back setObject: @"YES" forKey: @"next_data"];
+					
+					NSString *str_tag_count = [dic_back objectForKey: @"tagcount"];
+					NSInteger int_tag_back  = str_tag_count.integerValue;
+					
+					str_tag_count           = [dic      objectForKey: @"tagcount"];
+					NSInteger int_tag_now   = str_tag_count.integerValue;
+					NSInteger int_tag_count = int_tag_back - int_tag_now;
+					
+					str_tag_count = [NSString stringWithFormat:
+									 @"下剋上するまで %d 枚", (int)int_tag_count];
+					
+					[dic setObject: str_tag_count forKey: @"下剋上_1"];
+					
+					[dic_back setObject: @"YES"        forKey: @"back_data"];
+					
+					if ( int_tag_count < 20 ) {
+						
+						[dic_back setObject: @""                 forKey: @"back_image"];
+						[dic_back setObject: @"war_sekkin_1.png" forKey: @"next_image"];
+						[dic      setObject: @"war_sekkin_2.png" forKey: @"back_image"];
+						
+					} else {
+						
+						[dic_back setObject: @""                 forKey: @"back_image"];
+						[dic_back setObject: @"war_taiji_1.png"  forKey: @"next_image"];
+						[dic      setObject: @"war_taiji_2.png"  forKey: @"back_image"];
+						
+					}
+					
+				} else {
+					
+					NSMutableDictionary *dic_back = array_Like[0];
+
+					[dic_back setObject: @"" forKey: @"back_image"];
+					[dic_back setObject: @"" forKey: @"next_image"];
+					
+					[dic      setObject: @"" forKey: @"back_image"];
+					
+				}
+				
+				if ( [str_next isEqualToString: @"YES"] ) {
+					
+					NSString *str_tag_count = [dic      objectForKey: @"tagcount"];
+					NSInteger int_tag_now   = str_tag_count.integerValue;
+					
+					NSMutableDictionary *dic_next = array_Like[i + 1];
+
+					str_tag_count           = [dic_next objectForKey: @"tagcount"];
+					NSInteger int_tag_next  = str_tag_count.integerValue;
+					NSInteger int_tag_count = int_tag_now - int_tag_next;
+					
+					str_tag_count = [NSString stringWithFormat:
+									 @"下剋上されるまで %d 枚", (int)int_tag_count];
+					
+					[dic setObject: str_tag_count forKey: @"下剋上_2"];
+					
+					[dic_next setObject: @"YES"        forKey: @"back_data"];
+					
+					if ( int_tag_count < 20 ) {
+						
+						[dic      setObject: @"war_sekkin_1.png" forKey: @"next_image"];
+						[dic_next setObject: @"war_sekkin_2.png" forKey: @"back_image"];
+						
+					} else {
+						
+						[dic      setObject: @"war_taiji_1.png"  forKey: @"next_image"];
+						[dic_next setObject: @"war_taiji_2.png"  forKey: @"back_image"];
+						
+					}
+
+				} else {
+					
+					if ( i + 1 < [array_Like count] ) {
+						
+						NSMutableDictionary *dic_next = array_Like[i + 1];
+						
+						[dic      setObject: @"" forKey: @"back_image"];
+						
+						[dic_next setObject: @"" forKey: @"back_image"];
+						[dic_next setObject: @"" forKey: @"next_image"];
+
+					}
+					
+				}
 				
 			}
 			
@@ -251,9 +331,16 @@
 		NSString *str_back = [dic objectForKey: @"back_data"];
 		if ( [str_back isEqualToString: @"YES"] ) {
 			
-			cell.imageView_My_1.image = [UIImage imageNamed: @"war_taiji_2.png"];
+			NSString *back_image = [dic objectForKey: @"back_image"];
+			cell.imageView_My_1.image = [UIImage imageNamed: back_image];
+			cell.imageView_My_1.alpha = 0.5;
 			
 			cell.label_Gekokyu_1.text = [dic objectForKey: @"下剋上_1"];
+
+		} else {
+			
+			cell.imageView_My_1.image = nil;
+			cell.label_Gekokyu_1.text = @"";
 
 		}
 		
@@ -271,26 +358,35 @@
 		NSString *block = [dic objectForKey: @"block"];
 		
 		//taglabelをブロックとタグの投稿数を表示するように設定
-		cell.label_Comment.text = [NSString stringWithFormat: @"ブロック:%@ タグの投稿数:%@", block, tagcount];
+		cell.label_Comment.text = [NSString stringWithFormat: @"ブロック:%@\nタグの投稿数:%@", block, tagcount];
 		
 		NSString *str_next = [dic objectForKey: @"next_data"];
 		if ( [str_next isEqualToString: @"YES"] ) {
 			
-			cell.imageView_My_2.image = [UIImage imageNamed: @"war_taiji_1.png"];
+			NSString *next_image = [dic objectForKey: @"next_image"];
+			cell.imageView_My_2.image = [UIImage imageNamed: next_image];
+			cell.imageView_My_2.alpha = 0.5;
 			
 			cell.label_Gekokyu_2.text = [dic objectForKey: @"下剋上_2"];
+			
+		} else {
+			
+			cell.imageView_My_2.image = nil;
+			cell.label_Gekokyu_2.text = @"";
 			
 		}
 
 		//文字の色を変える
+//		cell.label_Rank.textColor      =
+//		cell.label_Shiro.textColor     =
+//		cell.label_Comment.textColor   =
+//		cell.label_Gekokyu_1.textColor =
+//		cell.label_Gekokyu_2.textColor = [UIColor colorWithRed: ( 30.0) / 255.0
+//														 green: (144.0) / 255.0
+//														  blue: (255.0) / 255.0
+//														 alpha: 1.0];
 		cell.label_Gekokyu_1.textColor =
-		cell.label_Rank.textColor      =
-		cell.label_Shiro.textColor     =
-		cell.label_Comment.textColor   =
-		cell.label_Gekokyu_2.textColor = [UIColor colorWithRed: ( 30.0) / 255.0
-														 green: (144.0) / 255.0
-														  blue: (255.0) / 255.0
-														 alpha: 1.0];
+		cell.label_Gekokyu_2.textColor = [UIColor redColor];
 
 		return cell;
 		
@@ -317,7 +413,18 @@
 			
 		});
 		
-		cell.imageView_VS_Down.image = [UIImage imageNamed: @"war_taiji_2.png"];
+		NSString *str_back = [dic objectForKey: @"back_data"];
+		if ( [str_back isEqualToString: @"YES"] ) {
+			
+			NSString *back_image = [dic objectForKey: @"back_image"];
+			cell.imageView_VS_Down.image = [UIImage imageNamed: back_image];
+			cell.imageView_VS_Down.alpha = 0.5;
+			
+		} else {
+			
+			cell.imageView_VS_Down.image = nil;
+			
+		}
 		
 		NSNumber *number = [dic objectForKey: @"rankno"];
 		
@@ -333,16 +440,27 @@
 		NSString *block = [dic objectForKey: @"block"];
 		
 		//taglabelをブロックとタグの投稿数を表示するように設定
-		cell.label_Comment.text = [NSString stringWithFormat: @"ブロック:%@ タグの投稿数:%@", block, tagcount];
+		cell.label_Comment.text = [NSString stringWithFormat: @"ブロック:%@\nタグの投稿数:%@", block, tagcount];
 		
-		cell.imageView_VS_Up.image = [UIImage imageNamed: @"war_taiji_1.png"];
+		NSString *str_next = [dic objectForKey: @"next_data"];
+		if ( [str_next isEqualToString: @"YES"] ) {
+			
+			NSString *next_image = [dic objectForKey: @"next_image"];
+			cell.imageView_VS_Up.image = [UIImage imageNamed: next_image];
+			cell.imageView_VS_Up.alpha = 0.5;
+			
+		} else {
+			
+			cell.imageView_VS_Up.image = nil;
+			
+		}
 
 //		cell.imageView_VS_1.image = nil;
 //		cell.imageView_VS_2.image = nil;
 		
-//		cell.label_Rank.textColor    = [UIColor blackColor];
-//		cell.label_Shiro.textColor   = [UIColor blackColor];
-//		cell.label_Comment.textColor = [UIColor blackColor];
+		cell.label_Rank.textColor    =
+		cell.label_Shiro.textColor   =
+		cell.label_Comment.textColor = [UIColor redColor];
 		
 		return cell;
 
