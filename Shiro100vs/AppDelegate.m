@@ -18,7 +18,7 @@
 	[self shiroData];
 	
 	self.bool_Ranking = self.bool_MyRank = NO;
-	
+
 	return YES;
 
 }

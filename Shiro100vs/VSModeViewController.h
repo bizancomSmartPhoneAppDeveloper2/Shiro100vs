@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "TabBarController.h"
+
 @interface VSModeViewController : UITableViewController < UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource >
+
+@property AudioPlayer *audioPlayer;
 
 - (NSArray *)JSONArrayData: (NSString *)url;
 

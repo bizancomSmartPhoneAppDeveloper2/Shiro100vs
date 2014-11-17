@@ -62,6 +62,13 @@
 		989EBFA71A190840002FCDAA /* war_sekkin_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFA51A190840002FCDAA /* war_sekkin_2.png */; };
 		989EBFAA1A19085C002FCDAA /* war_taiji_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFA81A19085C002FCDAA /* war_taiji_1.png */; };
 		989EBFAB1A19085C002FCDAA /* war_taiji_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFA91A19085C002FCDAA /* war_taiji_2.png */; };
+		989EBFB41A19B774002FCDAA /* Furinuki.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFB11A19B774002FCDAA /* Furinuki.mp3 */; };
+		989EBFB51A19B774002FCDAA /* Kassen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFB21A19B774002FCDAA /* Kassen.mp3 */; };
+		989EBFB61A19B774002FCDAA /* Tuisou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFB31A19B774002FCDAA /* Tuisou.mp3 */; };
+		989EBFB81A19B82A002FCDAA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 989EBFB71A19B829002FCDAA /* AVFoundation.framework */; };
+		989EBFBB1A19B876002FCDAA /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBFBA1A19B876002FCDAA /* AudioPlayer.m */; };
+		989EBFC11A19BC42002FCDAA /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBFC01A19BC42002FCDAA /* TabBarController.m */; };
+		989EBFC31A19C723002FCDAA /* Tenkaiti.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFC21A19C723002FCDAA /* Tenkaiti.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +149,15 @@
 		989EBFA51A190840002FCDAA /* war_sekkin_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_sekkin_2.png; sourceTree = "<group>"; };
 		989EBFA81A19085C002FCDAA /* war_taiji_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_taiji_1.png; sourceTree = "<group>"; };
 		989EBFA91A19085C002FCDAA /* war_taiji_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = war_taiji_2.png; sourceTree = "<group>"; };
+		989EBFB11A19B774002FCDAA /* Furinuki.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Furinuki.mp3; path = Sound/Furinuki.mp3; sourceTree = "<group>"; };
+		989EBFB21A19B774002FCDAA /* Kassen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Kassen.mp3; path = Sound/Kassen.mp3; sourceTree = "<group>"; };
+		989EBFB31A19B774002FCDAA /* Tuisou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Tuisou.mp3; path = Sound/Tuisou.mp3; sourceTree = "<group>"; };
+		989EBFB71A19B829002FCDAA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		989EBFB91A19B876002FCDAA /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		989EBFBA1A19B876002FCDAA /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		989EBFBF1A19BC42002FCDAA /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		989EBFC01A19BC42002FCDAA /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		989EBFC21A19C723002FCDAA /* Tenkaiti.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Tenkaiti.mp3; path = Sound/Tenkaiti.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				989EBFB81A19B82A002FCDAA /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +182,7 @@
 		989EBE9B1A147A2C002FCDAA = {
 			isa = PBXGroup;
 			children = (
+				989EBFB71A19B829002FCDAA /* AVFoundation.framework */,
 				989EBEA61A147A2C002FCDAA /* Shiro100vs */,
 				989EBEC01A147A2C002FCDAA /* Shiro100vsTests */,
 				989EBEA51A147A2C002FCDAA /* Products */,
@@ -187,6 +205,8 @@
 				989EBEB11A147A2C002FCDAA /* Main.storyboard */,
 				989EBEAB1A147A2C002FCDAA /* AppDelegate.h */,
 				989EBEAC1A147A2C002FCDAA /* AppDelegate.m */,
+				989EBFBF1A19BC42002FCDAA /* TabBarController.h */,
+				989EBFC01A19BC42002FCDAA /* TabBarController.m */,
 				989EBF841A15E4D0002FCDAA /* VSModeViewController.h */,
 				989EBF851A15E4D0002FCDAA /* VSModeViewController.m */,
 				989EBF9E1A18FC0E002FCDAA /* VSRanTableViewCell.h */,
@@ -201,7 +221,10 @@
 				989EBF1D1A147B93002FCDAA /* RankingTableViewCell.m */,
 				989EBF1E1A147B93002FCDAA /* RankingViewController.h */,
 				989EBF1F1A147B93002FCDAA /* RankingViewController.m */,
+				989EBFB91A19B876002FCDAA /* AudioPlayer.h */,
+				989EBFBA1A19B876002FCDAA /* AudioPlayer.m */,
 				989EBEB41A147A2C002FCDAA /* Images.xcassets */,
+				989EBFB01A19B73B002FCDAA /* Sound */,
 				989EBECF1A147B93002FCDAA /* Images */,
 				989EBEFF1A147B93002FCDAA /* iOS 7+ */,
 				989EBEA71A147A2C002FCDAA /* Supporting Files */,
@@ -289,6 +312,17 @@
 				989EBF131A147B93002FCDAA /* iTunesArtwork@2x.png */,
 			);
 			path = "iOS 7+";
+			sourceTree = "<group>";
+		};
+		989EBFB01A19B73B002FCDAA /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				989EBFB11A19B774002FCDAA /* Furinuki.mp3 */,
+				989EBFB21A19B774002FCDAA /* Kassen.mp3 */,
+				989EBFB31A19B774002FCDAA /* Tuisou.mp3 */,
+				989EBFC21A19C723002FCDAA /* Tenkaiti.mp3 */,
+			);
+			name = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +430,8 @@
 				989EBFAA1A19085C002FCDAA /* war_taiji_1.png in Resources */,
 				989EBF281A147B93002FCDAA /* Button_Shikan_150x120.png in Resources */,
 				989EBF741A147EEC002FCDAA /* Japanese_@2x.png in Resources */,
+				989EBFB41A19B774002FCDAA /* Furinuki.mp3 in Resources */,
+				989EBFC31A19C723002FCDAA /* Tenkaiti.mp3 in Resources */,
 				989EBF801A14827B002FCDAA /* Shiro_@2x.png in Resources */,
 				989EBF521A147B93002FCDAA /* Icon-40@3x.png in Resources */,
 				989EBF261A147B93002FCDAA /* Button_Modoru_100x50.png in Resources */,
@@ -403,6 +439,7 @@
 				989EBF7F1A14827B002FCDAA /* Shiro_@1x.png in Resources */,
 				989EBF501A147B93002FCDAA /* Icon-40.png in Resources */,
 				989EBEB51A147A2C002FCDAA /* Images.xcassets in Resources */,
+				989EBFB61A19B774002FCDAA /* Tuisou.mp3 in Resources */,
 				989EBFA71A190840002FCDAA /* war_sekkin_2.png in Resources */,
 				989EBF631A147B93002FCDAA /* iTunesArtwork@2x.png in Resources */,
 				989EBF571A147B93002FCDAA /* Icon-72@2x.png in Resources */,
@@ -412,6 +449,7 @@
 				989EBF561A147B93002FCDAA /* Icon-72.png in Resources */,
 				989EBF811A14827B002FCDAA /* Shiro_@3x.png in Resources */,
 				989EBF6E1A147D71002FCDAA /* Camera_@2x.png in Resources */,
+				989EBFB51A19B774002FCDAA /* Kassen.mp3 in Resources */,
 				989EBF5B1A147B93002FCDAA /* Icon-Small-50@2x.png in Resources */,
 				989EBF311A147B93002FCDAA /* Japanese_color.png in Resources */,
 				989EBF591A147B93002FCDAA /* Icon-76@2x.png in Resources */,
@@ -440,6 +478,8 @@
 				989EBF861A15E4D0002FCDAA /* VSModeViewController.m in Sources */,
 				989EBF681A147B93002FCDAA /* RankingTableViewCell.m in Sources */,
 				989EBF641A147B93002FCDAA /* JapanViewController.m in Sources */,
+				989EBFBB1A19B876002FCDAA /* AudioPlayer.m in Sources */,
+				989EBFC11A19BC42002FCDAA /* TabBarController.m in Sources */,
 				989EBEAA1A147A2C002FCDAA /* main.m in Sources */,
 				989EBF691A147B93002FCDAA /* RankingViewController.m in Sources */,
 			);

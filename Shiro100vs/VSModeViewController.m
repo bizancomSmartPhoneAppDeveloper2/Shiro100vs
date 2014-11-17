@@ -26,7 +26,7 @@
 	
 	BOOL bool_Error;
 
-	NSInteger integer_Height;
+	NSInteger integer_Height, integer_AudioNo;
 	
 }
 
@@ -49,6 +49,10 @@
 	app.bool_MyRank = YES;
 	bool_Error = NO;
 
+	self.audioPlayer = [[AudioPlayer alloc] init];
+
+	integer_AudioNo = 0;
+	
 }
 
 - (void)viewWillAppear: (BOOL)animated
@@ -61,6 +65,7 @@
 		array_Like = [[NSMutableArray alloc] init];
 		
 		NSInteger i = 0, int_ato = 0;
+		BOOL bool_top = NO;
 		
 		for ( NSDictionary *dic in array ) {
 
@@ -101,6 +106,13 @@
 						NSString *str_shiro = [dic_add objectForKey: @"shironame"];
 						if ( [str_shiro isEqualToString: app.string_Shikan] ) {
 
+							if ( i == 0 ) {
+								
+								bool_top = YES;
+								integer_AudioNo = 3;
+								
+							}
+							
 							[dic_add setObject: @"now" forKey: @"genjyou"];
 							
 							NSInteger int_back = k - 1;
@@ -237,10 +249,22 @@
 						[dic      setObject: @"war_sekkin_1.png" forKey: @"next_image"];
 						[dic_next setObject: @"war_sekkin_2.png" forKey: @"back_image"];
 						
+						if ( bool_top == NO ) {
+							
+							integer_AudioNo = 1;
+
+						}
+						
 					} else {
 						
 						[dic      setObject: @"war_taiji_1.png"  forKey: @"next_image"];
 						[dic_next setObject: @"war_taiji_2.png"  forKey: @"back_image"];
+						
+						if ( bool_top == NO ) {
+
+							integer_AudioNo = 2;
+
+						}
 						
 					}
 
@@ -279,11 +303,25 @@
 		
 	}
 	
+	if ( integer_AudioNo == 1 ) {
+		
+		[self.audioPlayer BGMStart1];
+		
+	} else if ( integer_AudioNo == 2 ) {
+		
+		[self.audioPlayer BGMStart2];
+		
+	} else if ( integer_AudioNo == 3 ) {
+		
+		[self.audioPlayer BGMStart3];
+		
+	}
+
 }
 
 - (void)viewDidAppear: (BOOL)animated
 {
-	
+
 }
 
 - (void)viewWillDisappear: (BOOL)animated
@@ -294,6 +332,8 @@
 - (void)viewDidDisappear: (BOOL)animated
 {
 	
+	[self.audioPlayer BGMStop];
+	
 }
 
 - (void)didReceiveMemoryWarning
@@ -303,7 +343,7 @@
 	// Dispose of any resources that can be recreated.
 	
 }
-
+						 
 //テーブルのセルの数を返すためのメソッド
 - (NSInteger)tableView: (UITableView *)tableView
  numberOfRowsInSection: (NSInteger)section
