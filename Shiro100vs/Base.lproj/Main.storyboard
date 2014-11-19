@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K1a-Nh-6VM">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
@@ -456,12 +457,12 @@
         <image name="Button_Album_100x50.png" width="100" height="50"/>
         <image name="Button_Camera_100x50.png" width="100" height="50"/>
         <image name="Button_Shikan_140x100.png" width="140" height="100"/>
-        <image name="Camera" width="40" height="40"/>
-        <image name="Japanese" width="40" height="40"/>
+        <image name="Camera" width="30" height="30"/>
+        <image name="Japanese" width="30" height="30"/>
         <image name="Japanese_color.png" width="772" height="800"/>
-        <image name="Ranking" width="40" height="40"/>
-        <image name="Shiro" width="40" height="40"/>
-        <image name="Shiro_@3x.png" width="160" height="160"/>
+        <image name="Ranking" width="30" height="30"/>
+        <image name="Shiro" width="30" height="30"/>
+        <image name="Shiro_@3x.png" width="90" height="90"/>
         <image name="war_sekkin_1.png" width="100" height="50"/>
         <image name="war_sekkin_2.png" width="100" height="50"/>
     </resources>
