@@ -69,6 +69,8 @@
 		989EBFBB1A19B876002FCDAA /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBFBA1A19B876002FCDAA /* AudioPlayer.m */; };
 		989EBFC11A19BC42002FCDAA /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBFC01A19BC42002FCDAA /* TabBarController.m */; };
 		989EBFC31A19C723002FCDAA /* Tenkaiti.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFC21A19C723002FCDAA /* Tenkaiti.mp3 */; };
+		989EBFF71A1C2B66002FCDAA /* Camera_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFF61A1C2B66002FCDAA /* Camera_120x120.png */; };
+		989EBFF91A1C2C4C002FCDAA /* Japanese_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFF81A1C2C4C002FCDAA /* Japanese_120x120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,8 @@
 		989EBFBF1A19BC42002FCDAA /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		989EBFC01A19BC42002FCDAA /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		989EBFC21A19C723002FCDAA /* Tenkaiti.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Tenkaiti.mp3; path = Sound/Tenkaiti.mp3; sourceTree = "<group>"; };
+		989EBFF61A1C2B66002FCDAA /* Camera_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera_120x120.png; sourceTree = "<group>"; };
+		989EBFF81A1C2C4C002FCDAA /* Japanese_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Japanese_120x120.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +265,7 @@
 		989EBECF1A147B93002FCDAA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				989EBFF81A1C2C4C002FCDAA /* Japanese_120x120.png */,
 				989EBF821A159563002FCDAA /* Button_Shikan_140x100.png */,
 				989EBED11A147B93002FCDAA /* Button_Album_100x50.png */,
 				989EBED31A147B93002FCDAA /* Button_Camera_100x50.png */,
@@ -269,6 +274,7 @@
 				989EBF6A1A147D71002FCDAA /* Camera_@1x.png */,
 				989EBF6B1A147D71002FCDAA /* Camera_@2x.png */,
 				989EBF6C1A147D71002FCDAA /* Camera_@3x.png */,
+				989EBFF61A1C2B66002FCDAA /* Camera_120x120.png */,
 				989EBF701A147EEC002FCDAA /* Japanese_@1x.png */,
 				989EBF711A147EEC002FCDAA /* Japanese_@2x.png */,
 				989EBF721A147EEC002FCDAA /* Japanese_@3x.png */,
@@ -434,6 +440,7 @@
 				989EBFC31A19C723002FCDAA /* Tenkaiti.mp3 in Resources */,
 				989EBF801A14827B002FCDAA /* Shiro_@2x.png in Resources */,
 				989EBF521A147B93002FCDAA /* Icon-40@3x.png in Resources */,
+				989EBFF71A1C2B66002FCDAA /* Camera_120x120.png in Resources */,
 				989EBF261A147B93002FCDAA /* Button_Modoru_100x50.png in Resources */,
 				989EBF611A147B93002FCDAA /* Icon@3x.png in Resources */,
 				989EBF7F1A14827B002FCDAA /* Shiro_@1x.png in Resources */,
@@ -451,6 +458,7 @@
 				989EBF6E1A147D71002FCDAA /* Camera_@2x.png in Resources */,
 				989EBFB51A19B774002FCDAA /* Kassen.mp3 in Resources */,
 				989EBF5B1A147B93002FCDAA /* Icon-Small-50@2x.png in Resources */,
+				989EBFF91A1C2C4C002FCDAA /* Japanese_120x120.png in Resources */,
 				989EBF311A147B93002FCDAA /* Japanese_color.png in Resources */,
 				989EBF591A147B93002FCDAA /* Icon-76@2x.png in Resources */,
 				989EBF791A14807B002FCDAA /* Ranking_@1x.png in Resources */,
