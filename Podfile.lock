@@ -1,0 +1,14 @@
+PODS:
+  - NXOAuth2Client (1.2.6)
+
+DEPENDENCIES:
+  - NXOAuth2Client (from `https://github.com/takuran/OAuth2Client.git`)
+
+EXTERNAL SOURCES:
+  NXOAuth2Client:
+    :git: https://github.com/takuran/OAuth2Client.git
+
+SPEC CHECKSUMS:
+  NXOAuth2Client: 7f20ac467d955d96476871cc1232e00ee2975b80
+
+COCOAPODS: 0.34.4
