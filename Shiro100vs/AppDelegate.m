@@ -8,6 +8,26 @@
 
 #import "AppDelegate.h"
 
+#import "NXOAuth2.h"
+
+//for Feedly Oauth2(sandbox)
+//account type
+NSString * const kOauth2ClientAccountType = @"Instagram";//@"Test App";//
+//clientId
+static NSString * const kOauth2ClientClientId = @"6cf2fe852f4b4b7898d5f36cb3b3ccad";
+//Client Secret
+static NSString * const kOauth2ClientClientSecret = @"eabe40cb7dc341369588e017eb998103";
+//Redirect Url
+static NSString * const kOauth2ClientRedirectUrl = @"http://localhost";//@"nxdevchallange://oauth";//
+//base url
+static NSString * const kOauth2ClientBaseUrl = @"https://api.instagram.com/oauth";
+//auth url
+static NSString * const kOauth2ClientAuthUrl = @"/authorize";
+//token url
+static NSString * const kOauth2ClientTokenUrl = @"/access_token";
+//scope url
+static NSString * const kOauth2ClientScopeUrl = @"basic";//@"likes+relationships+comments+basic";// @"likes", @"relationships", @"comments"@"basic";//@"https://api.instagram.com/subscriptions";
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -84,6 +104,56 @@
 {
 
 	self.bool_Ranking = self.bool_MyRank = YES;
+	
+}
+
++ (void)initialize
+{
+	
+	NSString *authUrl  = [kOauth2ClientBaseUrl stringByAppendingString: kOauth2ClientAuthUrl];
+	NSString *tokenUrl = [kOauth2ClientBaseUrl stringByAppendingString: kOauth2ClientTokenUrl];
+	
+	//setup oauth2client
+	//	[[NXOAuth2AccountStore sharedStore] setClientID:kOauth2ClientClientId
+	//											 secret:kOauth2ClientClientSecret
+	//											  scope:[NSSet setWithObjects:kOauth2ClientScopeUrl, nil]
+	//								   authorizationURL:[NSURL URLWithString:authUrl]
+	//										   tokenURL:[NSURL URLWithString:tokenUrl]
+	//										redirectURL:[NSURL URLWithString:kOauth2ClientRedirectUrl]
+	//									 forAccountType:kOauth2ClientAccountType];
+	
+	[[NXOAuth2AccountStore sharedStore] setClientID: kOauth2ClientClientId
+											 secret: kOauth2ClientClientSecret
+											  scope: [NSSet setWithObjects:kOauth2ClientScopeUrl, nil]//[NSSet setWithObjects: @"basic", @"likes", @"relationships", @"comments", nil]
+								   authorizationURL: [NSURL URLWithString: authUrl]//@"https://api.instagram.com/oauth/authorize"]
+										   tokenURL: [NSURL URLWithString: tokenUrl]//@"https://api.instagram.com/oauth/access_token"]
+										redirectURL: [NSURL URLWithString: kOauth2ClientRedirectUrl] //@"myapp://instagram-callback"]@"http://localhost"] //@"nxdevchallange://oauth"
+									  keyChainGroup: @"Instagram"
+									 forAccountType: kOauth2ClientAccountType];//@"Test App"];//@"Instagram"];
+	
+	//	[[NXOAuth2AccountStore sharedStore] setClientID: kOauth2ClientClientId
+	//											 secret: kOauth2ClientClientSecret
+	//								   authorizationURL: [NSURL URLWithString: authUrl]
+	//										   tokenURL: [NSURL URLWithString: tokenUrl]
+	//										redirectURL: [NSURL URLWithString: kOauth2ClientRedirectUrl]
+	//									 forAccountType: kOauth2ClientAccountType];
+	
+	//	[[NXOAuth2AccountStore sharedStore] setClientID: kOauth2ClientClientId
+	//											 secret: kOauth2ClientClientSecret
+	//											  scope: [NSSet setWithObjects:kOauth2ClientScopeUrl, nil]
+	//								   authorizationURL: [NSURL URLWithString:authUrl]
+	//										   tokenURL: [NSURL URLWithString: tokenUrl]
+	//										redirectURL: [NSURL URLWithString: kOauth2ClientRedirectUrl]
+	//									  keyChainGroup: @"Instagram"
+	//									 forAccountType: kOauth2ClientAccountType];
+	
+	//	[[NXOAuth2AccountStore sharedStore] setClientID: kOauth2ClientClientId
+	//											 secret: kOauth2ClientClientSecret
+	////											  scope: [NSSet setWithObjects:@"likes", @"relationships", @"comments", nil]
+	//								   authorizationURL: [NSURL URLWithString: @"https://api.instagram.com/oauth/authorize"]
+	//										   tokenURL: [NSURL URLWithString: @"https://api.instagram.com/oauth/access_token"]
+	//										redirectURL: [NSURL URLWithString: @"nxdevchallange://oauth"] //@"myapp://instagram-callback"] @"http://localhost"] //
+	//									 forAccountType: @"Test App"];//@"Instagram"];
 	
 }
 
