@@ -10,15 +10,16 @@
 
 #import "NXOAuth2.h"
 
-//for Feedly Oauth2(sandbox)
+//for Instagram Oauth2
 //account type
-NSString * const kOauth2ClientAccountType = @"Instagram";//@"Test App";//
+NSString * const kOauth2ClientAccountType = @"Instagram";
 //clientId
-static NSString * const kOauth2ClientClientId = @"6cf2fe852f4b4b7898d5f36cb3b3ccad";
+static NSString * const kOauth2ClientClientId = @"82a98c47976b46768c95f5a47922bd99"; //クライアントIDを設定
 //Client Secret
-static NSString * const kOauth2ClientClientSecret = @"eabe40cb7dc341369588e017eb998103";
+static NSString * const kOauth2ClientClientSecret = @"c3f381e099db4d0881ee7eec864f0b03"; //クライアントシークレットを設定
 //Redirect Url
-static NSString * const kOauth2ClientRedirectUrl = @"http://localhost";//@"nxdevchallange://oauth";//
+//static NSString * const kOauth2ClientRedirectUrl = @"http://goes-nowhere-does-nothing/";
+static NSString * const kOauth2ClientRedirectUrl = @"http://localhost/";
 //base url
 static NSString * const kOauth2ClientBaseUrl = @"https://api.instagram.com/oauth";
 //auth url
@@ -26,7 +27,7 @@ static NSString * const kOauth2ClientAuthUrl = @"/authorize";
 //token url
 static NSString * const kOauth2ClientTokenUrl = @"/access_token";
 //scope url
-static NSString * const kOauth2ClientScopeUrl = @"basic";//@"likes+relationships+comments+basic";// @"likes", @"relationships", @"comments"@"basic";//@"https://api.instagram.com/subscriptions";
+static NSString * const kOauth2ClientScopeUrl = @"basic";
 
 @implementation AppDelegate
 
@@ -76,16 +77,18 @@ static NSString * const kOauth2ClientScopeUrl = @"basic";//@"likes+relationships
 	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
 	
 	self.string_Shikan = [ud objectForKey: @"shiro100_shikan"];
-
-//	NSLog( @"1 get %@", self.string_Shikan );
-	
 	if ( self.string_Shikan == nil ) {
 		
 		self.string_Shikan = @"徳島城";
 		
 	}
 
-//	NSLog( @"2 get %@", self.string_Shikan );
+	self.string_Kurai  = [ud objectForKey: @"shiro100_kurai"];
+	if ( self.string_Kurai == nil ) {
+		
+		self.string_Kurai = @"足軽";
+		
+	}
 	
 }
 
@@ -95,8 +98,7 @@ static NSString * const kOauth2ClientScopeUrl = @"basic";//@"likes+relationships
 	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
 	
 	[ud setObject: self.string_Shikan forKey: @"shiro100_shikan"];
-	
-//	NSLog( @"put %@", self.string_Shikan );
+	[ud setObject: self.string_Kurai  forKey: @"shiro100_kurai"];
 	
 }
 
@@ -110,50 +112,17 @@ static NSString * const kOauth2ClientScopeUrl = @"basic";//@"likes+relationships
 + (void)initialize
 {
 	
-	NSString *authUrl  = [kOauth2ClientBaseUrl stringByAppendingString: kOauth2ClientAuthUrl];
-	NSString *tokenUrl = [kOauth2ClientBaseUrl stringByAppendingString: kOauth2ClientTokenUrl];
+	NSString *authUrl = [kOauth2ClientBaseUrl stringByAppendingString:kOauth2ClientAuthUrl];
+	NSString *tokenUrl = [kOauth2ClientBaseUrl stringByAppendingString:kOauth2ClientTokenUrl];
 	
-	//setup oauth2client
-	//	[[NXOAuth2AccountStore sharedStore] setClientID:kOauth2ClientClientId
-	//											 secret:kOauth2ClientClientSecret
-	//											  scope:[NSSet setWithObjects:kOauth2ClientScopeUrl, nil]
-	//								   authorizationURL:[NSURL URLWithString:authUrl]
-	//										   tokenURL:[NSURL URLWithString:tokenUrl]
-	//										redirectURL:[NSURL URLWithString:kOauth2ClientRedirectUrl]
-	//									 forAccountType:kOauth2ClientAccountType];
-	
-	[[NXOAuth2AccountStore sharedStore] setClientID: kOauth2ClientClientId
-											 secret: kOauth2ClientClientSecret
-											  scope: [NSSet setWithObjects:kOauth2ClientScopeUrl, nil]//[NSSet setWithObjects: @"basic", @"likes", @"relationships", @"comments", nil]
-								   authorizationURL: [NSURL URLWithString: authUrl]//@"https://api.instagram.com/oauth/authorize"]
-										   tokenURL: [NSURL URLWithString: tokenUrl]//@"https://api.instagram.com/oauth/access_token"]
-										redirectURL: [NSURL URLWithString: kOauth2ClientRedirectUrl] //@"myapp://instagram-callback"]@"http://localhost"] //@"nxdevchallange://oauth"
-									  keyChainGroup: @"Instagram"
-									 forAccountType: kOauth2ClientAccountType];//@"Test App"];//@"Instagram"];
-	
-	//	[[NXOAuth2AccountStore sharedStore] setClientID: kOauth2ClientClientId
-	//											 secret: kOauth2ClientClientSecret
-	//								   authorizationURL: [NSURL URLWithString: authUrl]
-	//										   tokenURL: [NSURL URLWithString: tokenUrl]
-	//										redirectURL: [NSURL URLWithString: kOauth2ClientRedirectUrl]
-	//									 forAccountType: kOauth2ClientAccountType];
-	
-	//	[[NXOAuth2AccountStore sharedStore] setClientID: kOauth2ClientClientId
-	//											 secret: kOauth2ClientClientSecret
-	//											  scope: [NSSet setWithObjects:kOauth2ClientScopeUrl, nil]
-	//								   authorizationURL: [NSURL URLWithString:authUrl]
-	//										   tokenURL: [NSURL URLWithString: tokenUrl]
-	//										redirectURL: [NSURL URLWithString: kOauth2ClientRedirectUrl]
-	//									  keyChainGroup: @"Instagram"
-	//									 forAccountType: kOauth2ClientAccountType];
-	
-	//	[[NXOAuth2AccountStore sharedStore] setClientID: kOauth2ClientClientId
-	//											 secret: kOauth2ClientClientSecret
-	////											  scope: [NSSet setWithObjects:@"likes", @"relationships", @"comments", nil]
-	//								   authorizationURL: [NSURL URLWithString: @"https://api.instagram.com/oauth/authorize"]
-	//										   tokenURL: [NSURL URLWithString: @"https://api.instagram.com/oauth/access_token"]
-	//										redirectURL: [NSURL URLWithString: @"nxdevchallange://oauth"] //@"myapp://instagram-callback"] @"http://localhost"] //
-	//									 forAccountType: @"Test App"];//@"Instagram"];
+	[[NXOAuth2AccountStore sharedStore] setClientID:kOauth2ClientClientId
+											 secret:kOauth2ClientClientSecret
+											  scope:[NSSet setWithObjects:kOauth2ClientScopeUrl, nil]
+								   authorizationURL:[NSURL URLWithString:authUrl]
+										   tokenURL:[NSURL URLWithString:tokenUrl]
+										redirectURL:[NSURL URLWithString:kOauth2ClientRedirectUrl]
+									  keyChainGroup:@"hoge"
+									 forAccountType:kOauth2ClientAccountType];
 	
 }
 

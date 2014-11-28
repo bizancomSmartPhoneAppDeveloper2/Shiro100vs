@@ -24,10 +24,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView_Japan;
 
 @property (weak, nonatomic) IBOutlet UIButton *button_Shikan;
-
-@property (weak, nonatomic) IBOutlet UILabel *label_Genzaino;
+@property (weak, nonatomic) IBOutlet UIButton *button_Kurai;
 
 @property (weak, nonatomic) IBOutlet UILabel *label_Genzai;
+@property (weak, nonatomic) IBOutlet UILabel *label_Login;
 
 @end
 
@@ -56,7 +56,7 @@
 
 - (IBAction)button_Shikan_Action:(id)sender
 {
-
+	
 	[self setBlockNo];
 	
 }
