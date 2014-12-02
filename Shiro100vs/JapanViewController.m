@@ -24,10 +24,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView_Japan;
 
 @property (weak, nonatomic) IBOutlet UIButton *button_Shikan;
-
-@property (weak, nonatomic) IBOutlet UILabel *label_Genzaino;
+@property (weak, nonatomic) IBOutlet UIButton *button_Kurai;
 
 @property (weak, nonatomic) IBOutlet UILabel *label_Genzai;
+@property (weak, nonatomic) IBOutlet UILabel *label_Login;
 
 @end
 
@@ -56,7 +56,7 @@
 
 - (IBAction)button_Shikan_Action:(id)sender
 {
-
+	
 	[self setBlockNo];
 	
 }
@@ -260,7 +260,10 @@
 {
 	
 	self.label_Genzai.text = [NSString stringWithFormat:
-							  @"現在の状況\n%@\nに仕官している。", app.string_Shikan];
+							  @"現在の状況\n%@ に\n仕官している。", app.string_Shikan];
+
+	self.label_Login.text  = [NSString stringWithFormat:
+							  @"位は %@ です。\n（ログインなし）" , app.string_Kurai];
 
 }
 

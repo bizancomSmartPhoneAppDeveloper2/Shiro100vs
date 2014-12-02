@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9873CA041A283ADF00E27C56 /* Button_Kurai_140x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 9873CA031A283ADF00E27C56 /* Button_Kurai_140x100.png */; };
+		9873CA071A28D79800E27C56 /* AuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9873CA061A28D79800E27C56 /* AuthWebViewController.m */; };
+		9873CA0A1A2B2B3F00E27C56 /* KuraiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9873CA091A2B2B3F00E27C56 /* KuraiViewController.m */; };
+		987D0AAB1A24218600F91A81 /* NTAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 987D0AA81A24218600F91A81 /* NTAuthWebViewController.m */; };
+		987D0AAE1A242C0D00F91A81 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 987D0AAD1A242C0D00F91A81 /* Podfile */; };
 		989EBEAA1A147A2C002FCDAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBEA91A147A2C002FCDAA /* main.m */; };
 		989EBEAD1A147A2C002FCDAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBEAC1A147A2C002FCDAA /* AppDelegate.m */; };
 		989EBEB31A147A2C002FCDAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989EBEB11A147A2C002FCDAA /* Main.storyboard */; };
@@ -69,6 +74,8 @@
 		989EBFBB1A19B876002FCDAA /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBFBA1A19B876002FCDAA /* AudioPlayer.m */; };
 		989EBFC11A19BC42002FCDAA /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBFC01A19BC42002FCDAA /* TabBarController.m */; };
 		989EBFC31A19C723002FCDAA /* Tenkaiti.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFC21A19C723002FCDAA /* Tenkaiti.mp3 */; };
+		989EBFF91A1C2C4C002FCDAA /* Japanese_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 989EBFF81A1C2C4C002FCDAA /* Japanese_120x120.png */; };
+		D8CE185B75D911CE6033E25B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C10CD9F7003C011DA0F97DEA /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +89,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		73CA9218EEE21C84C148F723 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9873CA031A283ADF00E27C56 /* Button_Kurai_140x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Kurai_140x100.png; sourceTree = "<group>"; };
+		9873CA051A28D79800E27C56 /* AuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthWebViewController.h; sourceTree = "<group>"; };
+		9873CA061A28D79800E27C56 /* AuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthWebViewController.m; sourceTree = "<group>"; };
+		9873CA081A2B2B3F00E27C56 /* KuraiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KuraiViewController.h; sourceTree = "<group>"; };
+		9873CA091A2B2B3F00E27C56 /* KuraiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KuraiViewController.m; sourceTree = "<group>"; };
+		987D0AA71A24218600F91A81 /* NTAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTAuthWebViewController.h; sourceTree = "<group>"; };
+		987D0AA81A24218600F91A81 /* NTAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTAuthWebViewController.m; sourceTree = "<group>"; };
+		987D0AAD1A242C0D00F91A81 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		989EBEA41A147A2C002FCDAA /* Shiro100vs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shiro100vs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989EBEA81A147A2C002FCDAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		989EBEA91A147A2C002FCDAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -158,6 +174,9 @@
 		989EBFBF1A19BC42002FCDAA /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		989EBFC01A19BC42002FCDAA /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		989EBFC21A19C723002FCDAA /* Tenkaiti.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Tenkaiti.mp3; path = Sound/Tenkaiti.mp3; sourceTree = "<group>"; };
+		989EBFF81A1C2C4C002FCDAA /* Japanese_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Japanese_120x120.png; sourceTree = "<group>"; };
+		BDEAD7BE8546F61973E6BE55 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C10CD9F7003C011DA0F97DEA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				989EBFB81A19B82A002FCDAA /* AVFoundation.framework in Frameworks */,
+				D8CE185B75D911CE6033E25B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +199,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B4D0B81A6A87F03C3E90038 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73CA9218EEE21C84C148F723 /* Pods.debug.xcconfig */,
+				BDEAD7BE8546F61973E6BE55 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7494E12D81D1DFD5F94315DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C10CD9F7003C011DA0F97DEA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		989EBE9B1A147A2C002FCDAA = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +223,8 @@
 				989EBEA61A147A2C002FCDAA /* Shiro100vs */,
 				989EBEC01A147A2C002FCDAA /* Shiro100vsTests */,
 				989EBEA51A147A2C002FCDAA /* Products */,
+				5B4D0B81A6A87F03C3E90038 /* Pods */,
+				7494E12D81D1DFD5F94315DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,6 +256,12 @@
 				989EBECE1A147B93002FCDAA /* CameraViewController.m */,
 				989EBF141A147B93002FCDAA /* JapanViewController.h */,
 				989EBF151A147B93002FCDAA /* JapanViewController.m */,
+				9873CA081A2B2B3F00E27C56 /* KuraiViewController.h */,
+				9873CA091A2B2B3F00E27C56 /* KuraiViewController.m */,
+				9873CA051A28D79800E27C56 /* AuthWebViewController.h */,
+				9873CA061A28D79800E27C56 /* AuthWebViewController.m */,
+				987D0AA71A24218600F91A81 /* NTAuthWebViewController.h */,
+				987D0AA81A24218600F91A81 /* NTAuthWebViewController.m */,
 				989EBF1C1A147B93002FCDAA /* RankingTableViewCell.h */,
 				989EBF1D1A147B93002FCDAA /* RankingTableViewCell.m */,
 				989EBF1E1A147B93002FCDAA /* RankingViewController.h */,
@@ -235,6 +280,7 @@
 		989EBEA71A147A2C002FCDAA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				987D0AAD1A242C0D00F91A81 /* Podfile */,
 				989EBEA81A147A2C002FCDAA /* Info.plist */,
 				989EBEA91A147A2C002FCDAA /* main.m */,
 			);
@@ -261,7 +307,9 @@
 		989EBECF1A147B93002FCDAA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				989EBFF81A1C2C4C002FCDAA /* Japanese_120x120.png */,
 				989EBF821A159563002FCDAA /* Button_Shikan_140x100.png */,
+				9873CA031A283ADF00E27C56 /* Button_Kurai_140x100.png */,
 				989EBED11A147B93002FCDAA /* Button_Album_100x50.png */,
 				989EBED31A147B93002FCDAA /* Button_Camera_100x50.png */,
 				989EBED51A147B93002FCDAA /* Button_Modoru_100x50.png */,
@@ -332,9 +380,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 989EBEC71A147A2D002FCDAA /* Build configuration list for PBXNativeTarget "Shiro100vs" */;
 			buildPhases = (
+				255DA1FDBE23C73A6D6CB4C9 /* Check Pods Manifest.lock */,
 				989EBEA01A147A2C002FCDAA /* Sources */,
 				989EBEA11A147A2C002FCDAA /* Frameworks */,
 				989EBEA21A147A2C002FCDAA /* Resources */,
+				987B38A4E7560D148C9A2873 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -374,6 +424,7 @@
 				TargetAttributes = {
 					989EBEA31A147A2C002FCDAA = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 4MR9PFC32K;
 					};
 					989EBEBC1A147A2C002FCDAA = {
 						CreatedOnToolsVersion = 6.1;
@@ -405,6 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				987D0AAE1A242C0D00F91A81 /* Podfile in Resources */,
 				989EBF5A1A147B93002FCDAA /* Icon-Small-50.png in Resources */,
 				989EBF831A159563002FCDAA /* Button_Shikan_140x100.png in Resources */,
 				989EBEB31A147A2C002FCDAA /* Main.storyboard in Resources */,
@@ -431,6 +483,7 @@
 				989EBF281A147B93002FCDAA /* Button_Shikan_150x120.png in Resources */,
 				989EBF741A147EEC002FCDAA /* Japanese_@2x.png in Resources */,
 				989EBFB41A19B774002FCDAA /* Furinuki.mp3 in Resources */,
+				9873CA041A283ADF00E27C56 /* Button_Kurai_140x100.png in Resources */,
 				989EBFC31A19C723002FCDAA /* Tenkaiti.mp3 in Resources */,
 				989EBF801A14827B002FCDAA /* Shiro_@2x.png in Resources */,
 				989EBF521A147B93002FCDAA /* Icon-40@3x.png in Resources */,
@@ -451,6 +504,7 @@
 				989EBF6E1A147D71002FCDAA /* Camera_@2x.png in Resources */,
 				989EBFB51A19B774002FCDAA /* Kassen.mp3 in Resources */,
 				989EBF5B1A147B93002FCDAA /* Icon-Small-50@2x.png in Resources */,
+				989EBFF91A1C2C4C002FCDAA /* Japanese_120x120.png in Resources */,
 				989EBF311A147B93002FCDAA /* Japanese_color.png in Resources */,
 				989EBF591A147B93002FCDAA /* Icon-76@2x.png in Resources */,
 				989EBF791A14807B002FCDAA /* Ranking_@1x.png in Resources */,
@@ -466,6 +520,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		255DA1FDBE23C73A6D6CB4C9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		987B38A4E7560D148C9A2873 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		989EBEA01A147A2C002FCDAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -474,8 +561,11 @@
 				989EBFA01A18FC0E002FCDAA /* VSRanTableViewCell.m in Sources */,
 				989EBF201A147B93002FCDAA /* CameraViewController.m in Sources */,
 				989EBEAD1A147A2C002FCDAA /* AppDelegate.m in Sources */,
+				9873CA0A1A2B2B3F00E27C56 /* KuraiViewController.m in Sources */,
 				989EBFA31A18FE29002FCDAA /* MyRanTableViewCell.m in Sources */,
 				989EBF861A15E4D0002FCDAA /* VSModeViewController.m in Sources */,
+				987D0AAB1A24218600F91A81 /* NTAuthWebViewController.m in Sources */,
+				9873CA071A28D79800E27C56 /* AuthWebViewController.m in Sources */,
 				989EBF681A147B93002FCDAA /* RankingTableViewCell.m in Sources */,
 				989EBF641A147B93002FCDAA /* JapanViewController.m in Sources */,
 				989EBFBB1A19B876002FCDAA /* AudioPlayer.m in Sources */,
@@ -605,27 +695,31 @@
 		};
 		989EBEC81A147A2D002FCDAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73CA9218EEE21C84C148F723 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Shiro100vs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		989EBEC91A147A2D002FCDAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDEAD7BE8546F61973E6BE55 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = Shiro100vs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

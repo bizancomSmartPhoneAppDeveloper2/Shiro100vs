@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString * const kOauth2ClientAccountType;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property NSString *string_Shikan;
+@property NSString *string_Kurai;
 
 @property BOOL bool_Ranking;
 @property BOOL bool_MyRank;

@@ -8,6 +8,26 @@
 
 #import "AppDelegate.h"
 
+#import "NXOAuth2.h"
+
+//for Instagram Oauth2
+//account type
+NSString * const kOauth2ClientAccountType = @"Instagram";
+//clientId
+static NSString * const kOauth2ClientClientId = @"fab5f0b10f0a47f9a1bbaf98d15bddae"; //クライアントIDを設定
+//Client Secret
+static NSString * const kOauth2ClientClientSecret = @"cdf859be8f0e45249a93e5289f8af4b9"; //クライアントシークレットを設定
+//Redirect Url
+static NSString * const kOauth2ClientRedirectUrl = @"http://localhost/";
+//base url
+static NSString * const kOauth2ClientBaseUrl = @"https://api.instagram.com/oauth";
+//auth url
+static NSString * const kOauth2ClientAuthUrl = @"/authorize";
+//token url
+static NSString * const kOauth2ClientTokenUrl = @"/access_token";
+//scope url
+static NSString * const kOauth2ClientScopeUrl = @"basic";
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -56,16 +76,18 @@
 	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
 	
 	self.string_Shikan = [ud objectForKey: @"shiro100_shikan"];
-
-//	NSLog( @"1 get %@", self.string_Shikan );
-	
 	if ( self.string_Shikan == nil ) {
 		
 		self.string_Shikan = @"徳島城";
 		
 	}
 
-//	NSLog( @"2 get %@", self.string_Shikan );
+	self.string_Kurai  = [ud objectForKey: @"shiro100_kurai"];
+	if ( self.string_Kurai == nil ) {
+		
+		self.string_Kurai = @"足軽";
+		
+	}
 	
 }
 
@@ -75,8 +97,7 @@
 	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
 	
 	[ud setObject: self.string_Shikan forKey: @"shiro100_shikan"];
-	
-//	NSLog( @"put %@", self.string_Shikan );
+	[ud setObject: self.string_Kurai  forKey: @"shiro100_kurai"];
 	
 }
 
@@ -84,6 +105,30 @@
 {
 
 	self.bool_Ranking = self.bool_MyRank = YES;
+	
+}
+
++ (void)initialize
+{
+	
+	NSString *authUrl = [kOauth2ClientBaseUrl stringByAppendingString:kOauth2ClientAuthUrl];
+	NSString *tokenUrl = [kOauth2ClientBaseUrl stringByAppendingString:kOauth2ClientTokenUrl];
+	
+//	[[NXOAuth2AccountStore sharedStore] setClientID:kOauth2ClientClientId
+//											 secret:kOauth2ClientClientSecret
+//											  scope:[NSSet setWithObjects:kOauth2ClientScopeUrl, nil]
+//								   authorizationURL:[NSURL URLWithString:authUrl]
+//										   tokenURL:[NSURL URLWithString:tokenUrl]
+//										redirectURL:[NSURL URLWithString:kOauth2ClientRedirectUrl]
+//									  keyChainGroup:@"hoge"
+//									 forAccountType:kOauth2ClientAccountType];
+
+	[[NXOAuth2AccountStore sharedStore] setClientID: kOauth2ClientClientId
+											 secret: kOauth2ClientClientSecret
+								   authorizationURL: [NSURL URLWithString:authUrl]
+										   tokenURL: [NSURL URLWithString:tokenUrl]
+										redirectURL: [NSURL URLWithString:kOauth2ClientRedirectUrl]
+									 forAccountType: kOauth2ClientAccountType];
 	
 }
 
