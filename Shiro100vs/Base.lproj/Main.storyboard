@@ -91,18 +91,21 @@
                                 <rect key="frame" x="0.0" y="1" width="600" height="550"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7m-Yv-RvN">
-                                <rect key="frame" x="119" y="472" width="465" height="71"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gto-zj-9N5">
+                                <rect key="frame" x="16" y="465" width="95" height="85"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="465" id="UlV-Ms-CwX"/>
-                                    <constraint firstAttribute="height" constant="71" id="ux2-Bg-dSo"/>
+                                    <constraint firstAttribute="width" constant="95" id="BcM-JD-yPe"/>
+                                    <constraint firstAttribute="height" constant="85" id="dFb-SZ-Ug5"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="ecP-PG-PRb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="v8f-vH-2L2"/>
                                 </constraints>
-                                <string key="text">足軽
-（ログインなし）</string>
-                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" image="Button_Kurai_140x100.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="B2W-9p-vwr" kind="push" id="1tD-DO-ORy"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knQ-oc-yEW">
                                 <rect key="frame" x="16" y="388" width="95" height="85"/>
                                 <constraints>
@@ -117,7 +120,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="現在の状況" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wse-IT-20j">
-                                <rect key="frame" x="113" y="395" width="465" height="71"/>
+                                <rect key="frame" x="119" y="395" width="465" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="465" id="138-Oc-hBB"/>
                                     <constraint firstAttribute="height" constant="71" id="jsK-bi-wD5"/>
@@ -150,27 +153,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gto-zj-9N5">
-                                <rect key="frame" x="16" y="465" width="95" height="85"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7m-Yv-RvN">
+                                <rect key="frame" x="119" y="472" width="465" height="71"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="95" id="BcM-JD-yPe"/>
-                                    <constraint firstAttribute="height" constant="85" id="dFb-SZ-Ug5"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="ecP-PG-PRb"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="v8f-vH-2L2"/>
+                                    <constraint firstAttribute="width" constant="465" id="UlV-Ms-CwX"/>
+                                    <constraint firstAttribute="height" constant="71" id="ux2-Bg-dSo"/>
                                 </constraints>
-                                <state key="normal" image="Button_Kurai_140x100.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="U7H-r9-Z5S" kind="push" id="DnS-MB-ehn"/>
-                                </connections>
-                            </button>
+                                <string key="text">足軽
+（ログインなし）</string>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Wgu-BE-RFp" secondAttribute="trailing" id="1Fi-4u-Qpr"/>
                             <constraint firstItem="Wgu-BE-RFp" firstAttribute="leading" secondItem="KNY-jx-YED" secondAttribute="leading" id="8Cj-XM-bIP"/>
-                            <constraint firstItem="UN6-i2-WEK" firstAttribute="top" secondItem="Gto-zj-9N5" secondAttribute="bottom" id="BVd-U7-t5S"/>
+                            <constraint firstItem="UN6-i2-WEK" firstAttribute="top" secondItem="Gto-zj-9N5" secondAttribute="bottom" constant="1" id="BVd-U7-t5S"/>
                             <constraint firstAttribute="bottom" secondItem="Wgu-BE-RFp" secondAttribute="bottom" constant="49" id="JZ2-DC-I8J"/>
                             <constraint firstItem="Wgu-BE-RFp" firstAttribute="top" secondItem="KNY-jx-YED" secondAttribute="top" constant="1" id="LdC-5J-tlT"/>
                             <constraint firstAttribute="trailing" secondItem="Wgu-BE-RFp" secondAttribute="trailing" id="M7b-Z3-NLO"/>
@@ -180,11 +180,11 @@
                             <constraint firstItem="UN6-i2-WEK" firstAttribute="top" secondItem="knQ-oc-yEW" secondAttribute="bottom" constant="78" id="Yqx-f2-jOX"/>
                             <constraint firstItem="knQ-oc-yEW" firstAttribute="leading" secondItem="KNY-jx-YED" secondAttribute="leading" constant="16" id="cDw-nd-BOT"/>
                             <constraint firstItem="Gto-zj-9N5" firstAttribute="leading" secondItem="KNY-jx-YED" secondAttribute="leadingMargin" id="eKY-ea-Vxs"/>
-                            <constraint firstItem="Wse-IT-20j" firstAttribute="leading" secondItem="knQ-oc-yEW" secondAttribute="trailing" constant="2" id="qBG-R1-LgB"/>
+                            <constraint firstItem="Wse-IT-20j" firstAttribute="leading" secondItem="knQ-oc-yEW" secondAttribute="trailing" constant="8" id="qBG-R1-LgB"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="日本" image="Japanese" id="PNx-nr-8AS"/>
-                    <navigationItem key="navigationItem" id="R9q-Zx-6El"/>
+                    <navigationItem key="navigationItem" title="日本" id="R9q-Zx-6El"/>
                     <connections>
                         <outlet property="button_Kurai" destination="Gto-zj-9N5" id="mEL-Wo-oNd"/>
                         <outlet property="button_Shikan" destination="knQ-oc-yEW" id="fIT-Jd-ngy"/>
@@ -284,7 +284,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Shiro_VSRan" rowHeight="116" id="68C-Q7-ZsI" customClass="VSRanTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Shiro_VSRan" rowHeight="116" id="68C-Q7-ZsI" customClass="VSRanTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="68C-Q7-ZsI" id="LM4-ds-d61">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -332,9 +332,9 @@
                                     <constraints>
                                         <constraint firstItem="lK1-mu-a9u" firstAttribute="top" secondItem="LM4-ds-d61" secondAttribute="top" id="2gx-Fp-Rxf"/>
                                         <constraint firstItem="M8j-5N-552" firstAttribute="leading" secondItem="LM4-ds-d61" secondAttribute="leading" constant="8" id="Mj3-A1-xY9"/>
-                                        <constraint firstAttribute="centerX" secondItem="lK1-mu-a9u" secondAttribute="centerX" id="XIk-rU-vJQ"/>
+                                        <constraint firstAttribute="centerX" secondItem="lK1-mu-a9u" secondAttribute="centerX" constant="-16.5" id="XIk-rU-vJQ"/>
                                         <constraint firstItem="M8j-5N-552" firstAttribute="top" secondItem="LM4-ds-d61" secondAttribute="top" constant="8" id="eb8-nG-tb3"/>
-                                        <constraint firstAttribute="centerX" secondItem="sjA-BH-lTl" secondAttribute="centerX" id="jUk-KZ-4hN"/>
+                                        <constraint firstAttribute="centerX" secondItem="sjA-BH-lTl" secondAttribute="centerX" constant="-16.5" id="jUk-KZ-4hN"/>
                                         <constraint firstAttribute="bottom" secondItem="sjA-BH-lTl" secondAttribute="bottom" constant="0.5" id="qQt-ge-hYC"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -345,16 +345,16 @@
                                     <outlet property="label_Comment" destination="eIj-pd-hMT" id="oVj-yK-l8Q"/>
                                     <outlet property="label_Rank" destination="wEd-JE-v9V" id="JgM-Ee-RM3"/>
                                     <outlet property="label_Shiro" destination="tkV-IL-PBW" id="roD-n6-t8H"/>
-                                    <segue destination="5z1-Ky-0o9" kind="showDetail" identifier="Shiro_VSRan" id="C3j-2G-OdF"/>
+                                    <segue destination="5z1-Ky-0o9" kind="push" identifier="Shiro_VSRan" id="C3j-2G-OdF"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Shiro_MyRan" rowHeight="316" id="eJP-d6-Mic" customClass="MyRanTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Shiro_MyRan" rowHeight="316" id="eJP-d6-Mic" customClass="MyRanTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eJP-d6-Mic" id="Hb8-4C-3Xs">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Shiro_@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-Ir-z2D">
-                                            <rect key="frame" x="8" y="8" width="300" height="300"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shiro_@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-Ir-z2D">
+                                            <rect key="frame" x="8" y="8" width="584" height="300"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="war_sekkin_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="bYf-ML-J0W">
                                             <rect key="frame" x="250" y="0.0" width="100" height="50"/>
@@ -420,34 +420,36 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Xzv-ry-AbC" secondAttribute="trailing" constant="8" id="1H4-1n-a7Y"/>
+                                        <constraint firstAttribute="trailing" secondItem="Xzv-ry-AbC" secondAttribute="trailing" constant="-25" id="1H4-1n-a7Y"/>
                                         <constraint firstItem="bdX-A3-ni1" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="3Rs-YE-U8n"/>
                                         <constraint firstItem="Dri-Nu-z3e" firstAttribute="top" secondItem="bYf-ML-J0W" secondAttribute="bottom" constant="8" id="6al-kK-Xp2"/>
-                                        <constraint firstAttribute="centerX" secondItem="WzE-EB-5Xu" secondAttribute="centerX" id="7Zv-wo-AEB"/>
+                                        <constraint firstItem="c3o-Ir-z2D" firstAttribute="leading" secondItem="tEb-o0-ARU" secondAttribute="leading" id="822-Uv-sXg"/>
                                         <constraint firstAttribute="bottom" secondItem="WzE-EB-5Xu" secondAttribute="bottom" constant="0.5" id="C5N-Jh-riu"/>
                                         <constraint firstItem="hyS-hY-gww" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="JDw-JM-3zk"/>
+                                        <constraint firstItem="c3o-Ir-z2D" firstAttribute="top" secondItem="Hb8-4C-3Xs" secondAttribute="topMargin" id="KEt-jH-Lef"/>
                                         <constraint firstItem="Dri-Nu-z3e" firstAttribute="top" secondItem="Hb8-4C-3Xs" secondAttribute="top" constant="58" id="KV7-S5-nkt"/>
                                         <constraint firstAttribute="centerX" secondItem="bYf-ML-J0W" secondAttribute="centerX" id="Kzc-D4-nbT"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="c3o-Ir-z2D" secondAttribute="bottom" constant="-0.5" id="LPB-Xv-381"/>
                                         <constraint firstAttribute="bottom" secondItem="WzE-EB-5Xu" secondAttribute="bottom" constant="0.5" id="OIw-Fn-XwZ"/>
                                         <constraint firstItem="ajy-ea-IIa" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="Pwz-6v-aIp"/>
                                         <constraint firstItem="ajy-ea-IIa" firstAttribute="centerX" secondItem="bYf-ML-J0W" secondAttribute="centerX" id="QwE-Kg-Qtn"/>
                                         <constraint firstAttribute="centerX" secondItem="WzE-EB-5Xu" secondAttribute="centerX" id="R2m-FA-RlN"/>
-                                        <constraint firstAttribute="trailing" secondItem="bdX-A3-ni1" secondAttribute="trailing" constant="8" id="RjP-WL-eVb"/>
+                                        <constraint firstAttribute="trailing" secondItem="bdX-A3-ni1" secondAttribute="trailing" constant="-25" id="RjP-WL-eVb"/>
                                         <constraint firstItem="Dri-Nu-z3e" firstAttribute="top" secondItem="Xzv-ry-AbC" secondAttribute="bottom" constant="8" symbolic="YES" id="Rl9-w9-2Gk"/>
                                         <constraint firstItem="bdX-A3-ni1" firstAttribute="top" secondItem="Dri-Nu-z3e" secondAttribute="bottom" constant="8" id="Rpy-Fg-BKH"/>
                                         <constraint firstItem="hyS-hY-gww" firstAttribute="top" secondItem="ajy-ea-IIa" secondAttribute="bottom" constant="8" id="SIc-AM-qQT"/>
-                                        <constraint firstAttribute="trailing" secondItem="ajy-ea-IIa" secondAttribute="trailing" constant="8" id="Wpc-pv-cSD"/>
+                                        <constraint firstAttribute="trailing" secondItem="ajy-ea-IIa" secondAttribute="trailing" constant="-25" id="Wpc-pv-cSD"/>
                                         <constraint firstItem="ajy-ea-IIa" firstAttribute="top" secondItem="bdX-A3-ni1" secondAttribute="bottom" constant="8" id="Wxw-WH-3Ik"/>
-                                        <constraint firstAttribute="centerX" secondItem="bYf-ML-J0W" secondAttribute="centerX" id="ZFe-kU-AN0"/>
-                                        <constraint firstAttribute="trailing" secondItem="tEb-o0-ARU" secondAttribute="trailing" constant="8" id="Zdz-3w-tyU"/>
-                                        <constraint firstItem="c3o-Ir-z2D" firstAttribute="top" secondItem="Hb8-4C-3Xs" secondAttribute="top" constant="8" id="dK3-Gx-EV1"/>
+                                        <constraint firstAttribute="trailing" secondItem="tEb-o0-ARU" secondAttribute="trailing" constant="-25" id="Zdz-3w-tyU"/>
+                                        <constraint firstItem="c3o-Ir-z2D" firstAttribute="trailing" secondItem="ajy-ea-IIa" secondAttribute="trailing" id="ZfE-9d-9pt"/>
+                                        <constraint firstItem="c3o-Ir-z2D" firstAttribute="centerX" secondItem="WzE-EB-5Xu" secondAttribute="centerX" id="d5P-YI-tCk"/>
                                         <constraint firstAttribute="bottom" secondItem="tEb-o0-ARU" secondAttribute="bottom" constant="28.5" id="dpX-X8-pL9"/>
                                         <constraint firstItem="Xzv-ry-AbC" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="gNb-Q5-Ctx"/>
                                         <constraint firstItem="Dri-Nu-z3e" firstAttribute="centerX" secondItem="Xzv-ry-AbC" secondAttribute="centerX" id="hkn-Gr-JID"/>
-                                        <constraint firstItem="c3o-Ir-z2D" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="kQd-ts-Y37"/>
                                         <constraint firstItem="Xzv-ry-AbC" firstAttribute="top" secondItem="Hb8-4C-3Xs" secondAttribute="top" constant="29" id="rzK-Qf-AST"/>
+                                        <constraint firstItem="c3o-Ir-z2D" firstAttribute="centerX" secondItem="bYf-ML-J0W" secondAttribute="centerX" id="v0J-rf-utS"/>
                                         <constraint firstItem="tEb-o0-ARU" firstAttribute="leading" secondItem="Hb8-4C-3Xs" secondAttribute="leading" constant="8" id="wft-L3-iOo"/>
-                                        <constraint firstAttribute="trailing" secondItem="hyS-hY-gww" secondAttribute="trailing" constant="8" id="y8Y-tX-ATJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="hyS-hY-gww" secondAttribute="trailing" constant="-25" id="y8Y-tX-ATJ"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
@@ -468,7 +470,7 @@
                                     <outlet property="label_Gekokyu_2" destination="tEb-o0-ARU" id="IIa-9Q-Py9"/>
                                     <outlet property="label_Rank" destination="Dri-Nu-z3e" id="KyL-MF-NUh"/>
                                     <outlet property="label_Shiro" destination="bdX-A3-ni1" id="DSD-vR-MQ7"/>
-                                    <segue destination="5z1-Ky-0o9" kind="showDetail" identifier="Shiro_MyRan" id="XFz-pE-Age"/>
+                                    <segue destination="5z1-Ky-0o9" kind="push" identifier="Shiro_MyRan" id="XFz-pE-Age"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -531,51 +533,117 @@
                             <outlet property="delegate" destination="5z1-Ky-0o9" id="316-3r-MaQ"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="NRN-FY-rGr">
-                        <barButtonItem key="rightBarButtonItem" title="Login" id="1J2-QE-Bej"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="NRN-FY-rGr"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9cu-lX-xLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1715" y="-1170"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="R2u-Jd-EDj">
+        <!--位-->
+        <scene sceneID="q1b-dn-Qw1">
             <objects>
-                <tableViewController id="U7H-r9-Z5S" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NPb-Zn-YZT">
+                <viewController id="B2W-9p-vwr" customClass="KuraiViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1uK-aK-RsJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="nWj-0i-wyP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jx5-Dq-ygF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7D-a4-4Ef">
+                                <rect key="frame" x="16" y="72" width="34" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymr-vW-6UN">
+                                <rect key="frame" x="16" y="100" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jPX-Bj-VCu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あだ名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ja-Cu-SUh">
+                                <rect key="frame" x="16" y="129" width="51" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-2I-vDS">
+                                <rect key="frame" x="16" y="158" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Bh8-Vw-XVc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="位" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQX-lO-tOA">
+                                <rect key="frame" x="16" y="188" width="17" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qh-yI-0bN">
+                                <rect key="frame" x="16" y="216" width="568" height="22"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n11-UJ-wh9">
+                                <rect key="frame" x="496" y="72" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="kLW-tN-u8k"/>
+                                    <constraint firstAttribute="width" constant="100" id="oVJ-J8-zpG"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="f68-UI-UXq">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f68-UI-UXq" id="E50-Cm-aZl">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="U7H-r9-Z5S" id="Qgy-dp-1hI"/>
-                            <outlet property="delegate" destination="U7H-r9-Z5S" id="lDb-Bq-azA"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="reG-zy-eqX">
-                        <barButtonItem key="rightBarButtonItem" title="Login" id="HWT-Hd-MZI">
+                        <constraints>
+                            <constraint firstItem="Tuc-2I-vDS" firstAttribute="top" secondItem="1Ja-Cu-SUh" secondAttribute="bottom" constant="8" id="4yn-Mm-W8g"/>
+                            <constraint firstItem="Ymr-vW-6UN" firstAttribute="trailing" secondItem="jx5-Dq-ygF" secondAttribute="trailingMargin" id="Ce6-EJ-eJ8"/>
+                            <constraint firstItem="6qh-yI-0bN" firstAttribute="top" secondItem="zQX-lO-tOA" secondAttribute="bottom" constant="8" id="JVH-t3-TYy"/>
+                            <constraint firstItem="6qh-yI-0bN" firstAttribute="leading" secondItem="jx5-Dq-ygF" secondAttribute="leadingMargin" id="L1s-wK-Buf"/>
+                            <constraint firstItem="1Ja-Cu-SUh" firstAttribute="leading" secondItem="jx5-Dq-ygF" secondAttribute="leadingMargin" id="Lyd-Q7-0kC"/>
+                            <constraint firstItem="l7D-a4-4Ef" firstAttribute="top" secondItem="1uK-aK-RsJ" secondAttribute="bottom" constant="8" id="N00-zu-Rpm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n11-UJ-wh9" secondAttribute="trailing" constant="-12" id="S2V-uF-s1k"/>
+                            <constraint firstItem="Ymr-vW-6UN" firstAttribute="leading" secondItem="jx5-Dq-ygF" secondAttribute="leadingMargin" id="Uxe-ie-PP7"/>
+                            <constraint firstItem="1Ja-Cu-SUh" firstAttribute="top" secondItem="Ymr-vW-6UN" secondAttribute="bottom" constant="8" id="WIw-07-AHp"/>
+                            <constraint firstItem="n11-UJ-wh9" firstAttribute="top" secondItem="1uK-aK-RsJ" secondAttribute="bottom" constant="8" id="Xtw-pp-e2o"/>
+                            <constraint firstItem="Tuc-2I-vDS" firstAttribute="trailing" secondItem="jx5-Dq-ygF" secondAttribute="trailingMargin" id="YQF-An-Gxr"/>
+                            <constraint firstItem="Ymr-vW-6UN" firstAttribute="top" secondItem="l7D-a4-4Ef" secondAttribute="bottom" constant="8" id="aYZ-hw-8A5"/>
+                            <constraint firstItem="Tuc-2I-vDS" firstAttribute="leading" secondItem="jx5-Dq-ygF" secondAttribute="leadingMargin" id="cmd-nn-7JG"/>
+                            <constraint firstItem="l7D-a4-4Ef" firstAttribute="leading" secondItem="jx5-Dq-ygF" secondAttribute="leadingMargin" id="j0J-Ki-2RK"/>
+                            <constraint firstItem="6qh-yI-0bN" firstAttribute="trailing" secondItem="jx5-Dq-ygF" secondAttribute="trailingMargin" id="mtN-cX-iWU"/>
+                            <constraint firstItem="zQX-lO-tOA" firstAttribute="top" secondItem="Tuc-2I-vDS" secondAttribute="bottom" constant="9" id="oc7-Pn-Ueh"/>
+                            <constraint firstItem="zQX-lO-tOA" firstAttribute="leading" secondItem="jx5-Dq-ygF" secondAttribute="leadingMargin" id="qqF-TZ-0PB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="位" id="fgo-21-D3U">
+                        <barButtonItem key="rightBarButtonItem" title="ログイン" id="maU-70-7EB">
                             <connections>
-                                <segue destination="0t7-dd-FIY" kind="push" id="FH1-tb-9Ox"/>
+                                <segue destination="0t7-dd-FIY" kind="push" id="JZG-zN-usd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rpR-aO-0hy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <outlet property="imageView_Profile" destination="n11-UJ-wh9" id="Oic-Kd-Q9k"/>
+                        <outlet property="label_FullName" destination="Ymr-vW-6UN" id="dir-Xi-3dp"/>
+                        <outlet property="label_Kurai" destination="6qh-yI-0bN" id="kNI-yq-FEp"/>
+                        <outlet property="label_Nickname" destination="Tuc-2I-vDS" id="Jv7-Rn-fLe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uc2-aa-nZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1715" y="242"/>
         </scene>
         <!--Auth Web View Controller-->
         <scene sceneID="acy-ME-J36">
             <objects>
-                <viewController id="0t7-dd-FIY" customClass="NTAuthWebViewController" sceneMemberID="viewController">
+                <viewController id="0t7-dd-FIY" customClass="AuthWebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Isl-iv-Ydq"/>
                         <viewControllerLayoutGuide type="bottom" id="VtP-fG-Sqz"/>
@@ -597,14 +665,14 @@
                             <constraint firstItem="u2b-iP-VY8" firstAttribute="leading" secondItem="N5d-rH-KY1" secondAttribute="leadingMargin" constant="-16" id="rte-2U-Lyg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="TeA-Re-xqA"/>
+                    <navigationItem key="navigationItem" id="TeA-Re-xqA" userLabel="ログイン"/>
                     <connections>
                         <outlet property="_webView" destination="u2b-iP-VY8" id="wHK-GV-J2u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5jv-dZ-59q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2554" y="242"/>
+            <point key="canvasLocation" x="2530" y="242"/>
         </scene>
         <!--日本-->
         <scene sceneID="cxc-dy-bmu">

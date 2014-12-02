@@ -24,8 +24,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "SDWebImage/UIImageView+WebCache.h"
-
-@interface NTViewController : UIViewController < UITableViewDataSource, SDWebImageManagerDelegate >
+@interface NTViewController : UIViewController
 
 @end

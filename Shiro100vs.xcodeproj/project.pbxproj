@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9873CA041A283ADF00E27C56 /* Button_Kurai_140x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 9873CA031A283ADF00E27C56 /* Button_Kurai_140x100.png */; };
+		9873CA071A28D79800E27C56 /* AuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9873CA061A28D79800E27C56 /* AuthWebViewController.m */; };
+		9873CA0A1A2B2B3F00E27C56 /* KuraiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9873CA091A2B2B3F00E27C56 /* KuraiViewController.m */; };
 		987D0AAB1A24218600F91A81 /* NTAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 987D0AA81A24218600F91A81 /* NTAuthWebViewController.m */; };
-		987D0AAC1A24218600F91A81 /* NTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 987D0AAA1A24218600F91A81 /* NTViewController.m */; };
 		987D0AAE1A242C0D00F91A81 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 987D0AAD1A242C0D00F91A81 /* Podfile */; };
 		989EBEAA1A147A2C002FCDAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBEA91A147A2C002FCDAA /* main.m */; };
 		989EBEAD1A147A2C002FCDAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EBEAC1A147A2C002FCDAA /* AppDelegate.m */; };
@@ -90,10 +91,12 @@
 /* Begin PBXFileReference section */
 		73CA9218EEE21C84C148F723 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9873CA031A283ADF00E27C56 /* Button_Kurai_140x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Kurai_140x100.png; sourceTree = "<group>"; };
+		9873CA051A28D79800E27C56 /* AuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthWebViewController.h; sourceTree = "<group>"; };
+		9873CA061A28D79800E27C56 /* AuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthWebViewController.m; sourceTree = "<group>"; };
+		9873CA081A2B2B3F00E27C56 /* KuraiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KuraiViewController.h; sourceTree = "<group>"; };
+		9873CA091A2B2B3F00E27C56 /* KuraiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KuraiViewController.m; sourceTree = "<group>"; };
 		987D0AA71A24218600F91A81 /* NTAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTAuthWebViewController.h; sourceTree = "<group>"; };
 		987D0AA81A24218600F91A81 /* NTAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTAuthWebViewController.m; sourceTree = "<group>"; };
-		987D0AA91A24218600F91A81 /* NTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTViewController.h; sourceTree = "<group>"; };
-		987D0AAA1A24218600F91A81 /* NTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTViewController.m; sourceTree = "<group>"; };
 		987D0AAD1A242C0D00F91A81 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		989EBEA41A147A2C002FCDAA /* Shiro100vs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shiro100vs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989EBEA81A147A2C002FCDAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -253,16 +256,18 @@
 				989EBECE1A147B93002FCDAA /* CameraViewController.m */,
 				989EBF141A147B93002FCDAA /* JapanViewController.h */,
 				989EBF151A147B93002FCDAA /* JapanViewController.m */,
+				9873CA081A2B2B3F00E27C56 /* KuraiViewController.h */,
+				9873CA091A2B2B3F00E27C56 /* KuraiViewController.m */,
+				9873CA051A28D79800E27C56 /* AuthWebViewController.h */,
+				9873CA061A28D79800E27C56 /* AuthWebViewController.m */,
+				987D0AA71A24218600F91A81 /* NTAuthWebViewController.h */,
+				987D0AA81A24218600F91A81 /* NTAuthWebViewController.m */,
 				989EBF1C1A147B93002FCDAA /* RankingTableViewCell.h */,
 				989EBF1D1A147B93002FCDAA /* RankingTableViewCell.m */,
 				989EBF1E1A147B93002FCDAA /* RankingViewController.h */,
 				989EBF1F1A147B93002FCDAA /* RankingViewController.m */,
 				989EBFB91A19B876002FCDAA /* AudioPlayer.h */,
 				989EBFBA1A19B876002FCDAA /* AudioPlayer.m */,
-				987D0AA71A24218600F91A81 /* NTAuthWebViewController.h */,
-				987D0AA81A24218600F91A81 /* NTAuthWebViewController.m */,
-				987D0AA91A24218600F91A81 /* NTViewController.h */,
-				987D0AAA1A24218600F91A81 /* NTViewController.m */,
 				989EBEB41A147A2C002FCDAA /* Images.xcassets */,
 				989EBFB01A19B73B002FCDAA /* Sound */,
 				989EBECF1A147B93002FCDAA /* Images */,
@@ -554,12 +559,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				989EBFA01A18FC0E002FCDAA /* VSRanTableViewCell.m in Sources */,
-				987D0AAC1A24218600F91A81 /* NTViewController.m in Sources */,
 				989EBF201A147B93002FCDAA /* CameraViewController.m in Sources */,
 				989EBEAD1A147A2C002FCDAA /* AppDelegate.m in Sources */,
+				9873CA0A1A2B2B3F00E27C56 /* KuraiViewController.m in Sources */,
 				989EBFA31A18FE29002FCDAA /* MyRanTableViewCell.m in Sources */,
 				989EBF861A15E4D0002FCDAA /* VSModeViewController.m in Sources */,
 				987D0AAB1A24218600F91A81 /* NTAuthWebViewController.m in Sources */,
+				9873CA071A28D79800E27C56 /* AuthWebViewController.m in Sources */,
 				989EBF681A147B93002FCDAA /* RankingTableViewCell.m in Sources */,
 				989EBF641A147B93002FCDAA /* JapanViewController.m in Sources */,
 				989EBFBB1A19B876002FCDAA /* AudioPlayer.m in Sources */,
@@ -698,7 +704,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -713,7 +719,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

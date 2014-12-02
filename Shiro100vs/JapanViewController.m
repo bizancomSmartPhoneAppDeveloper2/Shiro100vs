@@ -260,7 +260,10 @@
 {
 	
 	self.label_Genzai.text = [NSString stringWithFormat:
-							  @"現在の状況\n%@\nに仕官している。", app.string_Shikan];
+							  @"現在の状況\n%@ に\n仕官している。", app.string_Shikan];
+
+	self.label_Login.text  = [NSString stringWithFormat:
+							  @"位は %@ です。\n（ログインなし）" , app.string_Kurai];
 
 }
 

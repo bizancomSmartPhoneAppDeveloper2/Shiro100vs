@@ -119,7 +119,11 @@
     if ((contentStreams != nil) && (boundary != nil)) {
         // If post data is to big this happens and usualy triggers an HTTP 413 error
         NSLog(@"%s Stream has been reopened after close", __FUNCTION__);
-    }
+
+		NSLog( @"count = %d", (int)contentStreams.count );
+		
+	}
+	
     [contentStreams makeObjectsPerformSelector:@selector(open)];
     currentStream = nil;
     streamIndex = 0;
@@ -196,7 +200,7 @@
 
 - (void)removeFromRunLoop:(NSRunLoop *)runLoop forMode:(NSString *)mode;
 {
-    [super removeFromRunLoop:runLoop forMode:mode];
+//	[super removeFromRunLoop:runLoop forMode:mode];
 }
 
 

@@ -14,11 +14,10 @@
 //account type
 NSString * const kOauth2ClientAccountType = @"Instagram";
 //clientId
-static NSString * const kOauth2ClientClientId = @"82a98c47976b46768c95f5a47922bd99"; //クライアントIDを設定
+static NSString * const kOauth2ClientClientId = @"fab5f0b10f0a47f9a1bbaf98d15bddae"; //クライアントIDを設定
 //Client Secret
-static NSString * const kOauth2ClientClientSecret = @"c3f381e099db4d0881ee7eec864f0b03"; //クライアントシークレットを設定
+static NSString * const kOauth2ClientClientSecret = @"cdf859be8f0e45249a93e5289f8af4b9"; //クライアントシークレットを設定
 //Redirect Url
-//static NSString * const kOauth2ClientRedirectUrl = @"http://goes-nowhere-does-nothing/";
 static NSString * const kOauth2ClientRedirectUrl = @"http://localhost/";
 //base url
 static NSString * const kOauth2ClientBaseUrl = @"https://api.instagram.com/oauth";
@@ -115,14 +114,21 @@ static NSString * const kOauth2ClientScopeUrl = @"basic";
 	NSString *authUrl = [kOauth2ClientBaseUrl stringByAppendingString:kOauth2ClientAuthUrl];
 	NSString *tokenUrl = [kOauth2ClientBaseUrl stringByAppendingString:kOauth2ClientTokenUrl];
 	
-	[[NXOAuth2AccountStore sharedStore] setClientID:kOauth2ClientClientId
-											 secret:kOauth2ClientClientSecret
-											  scope:[NSSet setWithObjects:kOauth2ClientScopeUrl, nil]
-								   authorizationURL:[NSURL URLWithString:authUrl]
-										   tokenURL:[NSURL URLWithString:tokenUrl]
-										redirectURL:[NSURL URLWithString:kOauth2ClientRedirectUrl]
-									  keyChainGroup:@"hoge"
-									 forAccountType:kOauth2ClientAccountType];
+//	[[NXOAuth2AccountStore sharedStore] setClientID:kOauth2ClientClientId
+//											 secret:kOauth2ClientClientSecret
+//											  scope:[NSSet setWithObjects:kOauth2ClientScopeUrl, nil]
+//								   authorizationURL:[NSURL URLWithString:authUrl]
+//										   tokenURL:[NSURL URLWithString:tokenUrl]
+//										redirectURL:[NSURL URLWithString:kOauth2ClientRedirectUrl]
+//									  keyChainGroup:@"hoge"
+//									 forAccountType:kOauth2ClientAccountType];
+
+	[[NXOAuth2AccountStore sharedStore] setClientID: kOauth2ClientClientId
+											 secret: kOauth2ClientClientSecret
+								   authorizationURL: [NSURL URLWithString:authUrl]
+										   tokenURL: [NSURL URLWithString:tokenUrl]
+										redirectURL: [NSURL URLWithString:kOauth2ClientRedirectUrl]
+									 forAccountType: kOauth2ClientAccountType];
 	
 }
 
